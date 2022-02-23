@@ -16,7 +16,6 @@ const sections = [
   {text: 'compétences'},
   {text: 'portfolio'},
   {text: 'tarifs'},
-  {text: 'à propos'},
   {text: 'contact'},
 ];
 
@@ -53,17 +52,16 @@ const Header = () => {
           <Stack
             display={{ xs: 'none', md: 'flex' }}
             direction="row"
-            justifyContent="space-around"
             color="#353535"
             bgcolor="white"
           >
             {
-              sections.map(({text}) => 
+              sections.map(({text}, i) => 
                 <Button
                   key={text}
                   color="inherit"
+                  fullWidth
                   sx={{
-                    px: 3,
                     py: 1.5,
                     borderRadius: 0,
                     fontSize: '0.7em',
