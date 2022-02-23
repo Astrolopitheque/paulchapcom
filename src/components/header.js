@@ -38,7 +38,7 @@ const Header = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h6" component="div" letterSpacing={1.5} sx={{ flexGrow: 1 }}>
               Paul Chaperon
             </Typography>
           </Toolbar>
