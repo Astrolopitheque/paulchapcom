@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Helmet} from "react-helmet";
 
-const Metadata = ({}) => {
+const Metadata = () => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
