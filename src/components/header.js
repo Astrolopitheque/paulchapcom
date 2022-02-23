@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 const sections = [
   {text: 'accueil'},
@@ -17,7 +18,6 @@ const sections = [
   {text: 'tarifs'},
   {text: 'à propos'},
   {text: 'contact'},
-  {text: 'paramètres'},
 ];
 
 const Header = () => {
@@ -38,9 +38,17 @@ const Header = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" letterSpacing={1.5}>
+            <Typography variant="h6" component="div" letterSpacing={1.5} flexGrow={1}>
               Paul Chaperon
             </Typography>
+            <IconButton
+              size="large"
+              edge="end"
+              color="inherit"
+              aria-label="paramètres"
+            >
+              <SettingsIcon />
+            </IconButton>
           </Toolbar>
           <Stack
             display={{ xs: 'none', md: 'flex' }}
@@ -55,7 +63,7 @@ const Header = () => {
                   key={text}
                   color="inherit"
                   sx={{
-                    px: 2,
+                    px: 3,
                     py: 1.5,
                     borderRadius: 0,
                     fontSize: '0.7em',
@@ -85,6 +93,7 @@ const Header = () => {
                 px: 5,
                 py: 1.5,
                 borderRadius: 0,
+                justifyContent: 'flex-start',
                 letterSpacing: 2,
               }}
             >
