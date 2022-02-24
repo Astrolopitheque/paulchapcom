@@ -18,11 +18,11 @@ const StyledHeading = ({ children, align, color, sx }) => {
         ...sx,
       }}
     >
-      {(align == 'left' || align == 'justify') && '> > > '}
-      {align == 'center' && '~~ '}
+      {(align === 'left' || align === 'justify') && '> > > '}
+      {align === 'center' && '~~ '}
       {children}
-      {align == 'center' && ' ~~'}
-      {align == 'right' && ' • • •'}
+      {align === 'center' && ' ~~'}
+      {align === 'right' && ' • • •'}
     </Typography>
   );
 }
@@ -40,7 +40,7 @@ const Index = () => {
         <Paper
           sx={{
             color: 'white',
-            bgcolor: '#7dabaa',
+            bgcolor: '#69BAB8',
             width: {md: '50%'},
             borderRadius: 0,
             p: 3,
