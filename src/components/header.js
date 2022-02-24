@@ -98,10 +98,9 @@ const Header = () => {
         <Box>
           <IconButton
             size="large"
-            edge="start"
             color="inherit"
             aria-label="close menu"
-            sx={{ ml: 0 }}
+            sx={{ float: 'right' }}
             onClick={closeMenu}
           >
             <CloseIcon />

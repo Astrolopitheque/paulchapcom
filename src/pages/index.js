@@ -41,7 +41,7 @@ const Index = () => {
           sx={{
             color: 'white',
             bgcolor: '#69BAB8',
-            width: {md: '50%'},
+            width: {sm: '80%', md: '70%', lg: '60%'},
             borderRadius: 0,
             p: 3,
             mb: 4,
