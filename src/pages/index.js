@@ -44,7 +44,7 @@ const Index = () => {
             width: {md: '50%'},
             borderRadius: 0,
             p: 3,
-            mb: 2,
+            mb: 4,
             textAlign: 'center'
           }}
         >

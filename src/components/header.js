@@ -8,6 +8,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 const sections = [
@@ -22,6 +24,9 @@ const sections = [
 const Header = () => {
   const [drawer, setDrawer] = useState(false);
 
+  const openMenu = () => setDrawer(true);
+  const closeMenu = () => setDrawer(false);
+
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
@@ -31,20 +36,29 @@ const Header = () => {
               size="large"
               edge="start"
               color="inherit"
-              aria-label="menu"
+              aria-label="open menu"
               sx={{ display: {md: 'none'}, mr: 2 }}
-              onClick={() => setDrawer(!drawer)}
+              onClick={openMenu}
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" letterSpacing={1.5} flexGrow={1}>
+            <Typography variant="h6" component="div" letterSpacing={1.4} flexGrow={1}>
               Paul Chaperon
             </Typography>
             <IconButton
               size="large"
               edge="end"
               color="inherit"
-              aria-label="paramètres"
+              aria-label="go top"
+              sx={{ mr: {xs: 0, sm: 3}, display: {md: 'none'} }}
+            >
+              <ArrowUpwardRoundedIcon />
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="end"
+              color="inherit"
+              aria-label="settings"
             >
               <SettingsIcon />
             </IconButton>
@@ -81,14 +95,27 @@ const Header = () => {
         onClose={() => setDrawer(false)}
         sx={{ display: {md: 'none'} }}
       >
+        <Box>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="close menu"
+            sx={{ ml: 0 }}
+            onClick={closeMenu}
+          >
+            <CloseIcon />
+          </IconButton>
+        </Box>
         {
           sections.map(({text}, i) => 
             <Button
               key={text}
               color="inherit"
               sx={{
-                mt: i?0.8:5,
-                px: 5,
+                mt: 0.8,
+                pl: 6,
+                pr: 5,
                 py: 1.5,
                 borderRadius: 0,
                 justifyContent: 'flex-start',
