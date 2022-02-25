@@ -18,11 +18,12 @@ const StyledHeading = ({ children, align, color, sx }) => {
         ...sx,
       }}
     >
-      {(align === 'left' || align === 'justify') && '> > > '}
-      {align === 'center' && '~~ '}
+      {(align === 'left' || align === 'justify') && '>>> '}
+      {align === 'right' && '• '}
+      {align === 'center' && '— '}
       {children}
-      {align === 'center' && ' ~~'}
-      {align === 'right' && ' • • •'}
+      {align === 'center' && ' —'}
+      {align === 'right' && ' •'}
     </Typography>
   );
 }
