@@ -10,8 +10,18 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { keyframes } from "@emotion/react";
 
-const SocialButton = ({ icon, title, href }) => {
+const growAnimation = keyframes`
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
+const SocialButton = ({ icon, title, href, delayAnimation }) => {
   const IconElement = icon;
   return (
     <Tooltip title={title}>
@@ -20,11 +30,18 @@ const SocialButton = ({ icon, title, href }) => {
         href={href}
         rel="noopener noreferrer"
         target="_blank"
+        sx={{
+          animation: `0.5s ${growAnimation} ${delayAnimation}s`,
+        }}
       >
         <IconElement />
       </IconButton>
     </Tooltip>
   );
+}
+
+SocialButton.defaultProps = {
+  delayAnimation: 0,
 }
 
 const Footer = () => {
@@ -36,10 +53,28 @@ const Footer = () => {
             Site développé par Paul Chaperon &copy; {new Date().getFullYear().toString()}{" "}
           </Typography>
           <Stack my={1} direction="row">
-            <SocialButton icon={GitHubIcon} title="Astrolopitheque" href="https://github.com/Astrolopitheque" />
-            <SocialButton icon={InstagramIcon} title="@paul.freelance" href="https://www.instagram.com/paul.freelance/" />
-            <SocialButton icon={TwitterIcon} title="Prochainement :)" />
-            <SocialButton icon={LinkedInIcon} title="Prochainement :)" />
+            <SocialButton
+              icon={GitHubIcon}
+              title="Astrolopitheque"
+              href="https://github.com/Astrolopitheque"
+              delayAnimation={0.1}
+            />
+            <SocialButton
+              icon={InstagramIcon}
+              title="@paul.freelance"
+              href="https://www.instagram.com/paul.freelance/"
+              delayAnimation={0.15}
+            />
+            <SocialButton
+              icon={TwitterIcon}
+              title="Prochainement :)"
+              delayAnimation={0.2}
+            />
+            <SocialButton
+              icon={LinkedInIcon}
+              title="Prochainement :)"
+              delayAnimation={0.25}
+            />
           </Stack>
         </Toolbar>
       </AppBar>

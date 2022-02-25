@@ -3,12 +3,11 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 
 const CircularCompetence = ({ children, ableness, size }) => {
-  let color;
+  let color = 'blue';
   if(ableness < 25) color = 'red';
   else if(ableness < 50) color = 'orange';
   else if(ableness < 75) color = 'yellow';
   else if(ableness < 100) color = 'green';
-  else color = 'blue';
 
   const [progress, setProgress] = useState(0);
 
