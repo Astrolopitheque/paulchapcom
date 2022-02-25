@@ -105,7 +105,6 @@ const Header = () => {
             size="large"
             color="inherit"
             aria-label="close menu"
-            sx={{ float: 'right' }}
             onClick={closeMenu}
           >
             <CloseIcon />
@@ -117,8 +116,7 @@ const Header = () => {
               key={text}
               color="inherit"
               sx={{
-                pl: 6,
-                pr: 5,
+                px: 6,
                 py: 2,
                 borderRadius: 0,
                 justifyContent: 'flex-start',

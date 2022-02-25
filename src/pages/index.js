@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Layout from '../components/layout';
 import Metadata from '../components/metadata';
+import CircularCompetence from '../components/circularcompetence';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
@@ -65,6 +66,11 @@ const Index = () => {
         </Box>
         <StyledHeading align="right">Services proposés</StyledHeading>
         <StyledHeading>Mes compétences</StyledHeading>
+        <CircularCompetence ableness={10} size="150px">Débutant</CircularCompetence>
+        <CircularCompetence ableness={25} size="150px">Novice</CircularCompetence>
+        <CircularCompetence ableness={50} size="150px">Intermédiaire</CircularCompetence>
+        <CircularCompetence ableness={75} size="150px">Avancé</CircularCompetence>
+        <CircularCompetence ableness={100} size="150px">Expert</CircularCompetence>
         <StyledHeading align="right">Mon portfolio</StyledHeading>
         <StyledHeading>Tarifs</StyledHeading>
         <StyledHeading align="center">Contactez-moi !</StyledHeading>
