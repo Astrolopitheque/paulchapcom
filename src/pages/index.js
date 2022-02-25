@@ -14,7 +14,7 @@ const StyledHeading = ({ children, align, color, sx }) => {
       fontSize={{xs: '1.9em', md: '3.5em'}}
       align={align}
       sx={{
-        mb: 3,
+        my: 3,
         color,
         ...sx,
       }}
@@ -50,7 +50,7 @@ const Index = () => {
             textAlign: 'center'
           }}
         >
-          <StyledHeading align="center">Qui suis-je ?</StyledHeading>
+          <StyledHeading align="center" sx={{ mt: 0 }}>Qui suis-je ?</StyledHeading>
           <Box display="flex" flexDirection="column" alignItems={'flex-end'}>
             <Typography mb={2} align="justify" width={{md: '90%'}}>
               <b>Passionné d'informatique</b> depuis mon enfance,
@@ -66,11 +66,7 @@ const Index = () => {
         </Box>
         <StyledHeading align="right">Services proposés</StyledHeading>
         <StyledHeading>Mes compétences</StyledHeading>
-        <CircularCompetence ableness={10} size="150px">Débutant</CircularCompetence>
-        <CircularCompetence ableness={25} size="150px">Novice</CircularCompetence>
-        <CircularCompetence ableness={50} size="150px">Intermédiaire</CircularCompetence>
-        <CircularCompetence ableness={75} size="150px">Avancé</CircularCompetence>
-        <CircularCompetence ableness={100} size="150px">Expert</CircularCompetence>
+        <CircularCompetence ableness={90} size="min(100%, 600px)">Javascript</CircularCompetence>
         <StyledHeading align="right">Mon portfolio</StyledHeading>
         <StyledHeading>Tarifs</StyledHeading>
         <StyledHeading align="center">Contactez-moi !</StyledHeading>
