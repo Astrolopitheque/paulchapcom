@@ -57,23 +57,23 @@ const Footer = () => {
               icon={GitHubIcon}
               title="Astrolopitheque"
               href="https://github.com/Astrolopitheque"
-              delayAnimation={0.1}
+              delayAnimation={0.5}
             />
             <SocialButton
               icon={InstagramIcon}
               title="@paul.freelance"
               href="https://www.instagram.com/paul.freelance/"
-              delayAnimation={0.15}
+              delayAnimation={0.55}
             />
             <SocialButton
               icon={TwitterIcon}
               title="Prochainement :)"
-              delayAnimation={0.2}
+              delayAnimation={0.6}
             />
             <SocialButton
               icon={LinkedInIcon}
               title="Prochainement :)"
-              delayAnimation={0.25}
+              delayAnimation={0.65}
             />
           </Stack>
         </Toolbar>
