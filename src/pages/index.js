@@ -68,6 +68,7 @@ const Index = () => {
         <StyledHeading align="right">Mon portfolio</StyledHeading>
         <StyledHeading>Tarifs</StyledHeading>
         <StyledHeading align="center">Contactez-moi !</StyledHeading>
+        Nadia mon bb ❤
       </Container>
     </Layout>
   );
