@@ -94,6 +94,11 @@ const Header = () => {
         open={drawer}
         onClose={() => setDrawer(false)}
         sx={{ display: {md: 'none'} }}
+        PaperProps={{
+          sx: {
+            color: 'inherit',
+          }
+        }}
       >
         <Box>
           <IconButton
@@ -112,10 +117,9 @@ const Header = () => {
               key={text}
               color="inherit"
               sx={{
-                mt: 0.8,
                 pl: 6,
                 pr: 5,
-                py: 1.5,
+                py: 2,
                 borderRadius: 0,
                 justifyContent: 'flex-start',
                 letterSpacing: 2,

@@ -15,11 +15,11 @@ const Layout = ({children}) => {
     <StylesProvider injectFirst>
       <CssBaseline />
       <Header />
-      <Toolbar sx={{ mb: 4, height: {md: '100px'} }}/>
+      <Toolbar sx={{ mb: 3, height: {md: '110px'} }}/>
       <main>
         {children}
       </main>
-      <Toolbar sx={{ mt: 4 }}/>
+      <Toolbar sx={{ m: 1.5, height: {xs: '100px', md: '70px'} }}/>
       <Footer />
     </StylesProvider>
   );
