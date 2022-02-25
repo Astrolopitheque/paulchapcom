@@ -11,6 +11,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { scrollToEl } from '../utils';
+
+const backToTop = () => scrollToEl('#page-top');
 
 const sections = [
   {text: 'accueil'},
@@ -49,8 +52,10 @@ const Header = () => {
               size="large"
               edge="end"
               color="inherit"
+              title="Remonter en haut de la page"
               aria-label="go top"
               sx={{ mr: {xs: 0, sm: 3}, display: {md: 'none'} }}
+              onClick={backToTop}
             >
               <ArrowUpwardRoundedIcon />
             </IconButton>

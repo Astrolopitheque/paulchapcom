@@ -14,6 +14,7 @@ const Layout = ({children}) => {
   return (
     <StylesProvider injectFirst>
       <CssBaseline />
+      <span id="page-top" />
       <Header />
       <Toolbar sx={{ mb: 3, height: {md: '110px'} }}/>
       <main>
