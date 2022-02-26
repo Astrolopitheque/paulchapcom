@@ -10,18 +10,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { keyframes } from "@emotion/react";
 
-const growAnimation = keyframes`
-  0% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-`;
-
-const SocialButton = ({ icon, title, href, delayAnimation }) => {
+const SocialButton = ({ icon, title, href }) => {
   const IconElement = icon;
   return (
     <Tooltip title={title}>
@@ -30,9 +20,6 @@ const SocialButton = ({ icon, title, href, delayAnimation }) => {
         href={href}
         rel="noopener noreferrer"
         target="_blank"
-        sx={{
-          animation: `0.5s ${growAnimation} ${delayAnimation}s`,
-        }}
       >
         <IconElement />
       </IconButton>
@@ -57,23 +44,19 @@ const Footer = () => {
               icon={GitHubIcon}
               title="Astrolopitheque"
               href="https://github.com/Astrolopitheque"
-              delayAnimation={0.5}
             />
             <SocialButton
               icon={InstagramIcon}
               title="@paul.freelance"
               href="https://www.instagram.com/paul.freelance/"
-              delayAnimation={0.55}
             />
             <SocialButton
               icon={TwitterIcon}
               title="Prochainement :)"
-              delayAnimation={0.6}
             />
             <SocialButton
               icon={LinkedInIcon}
               title="Prochainement :)"
-              delayAnimation={0.65}
             />
           </Stack>
         </Toolbar>
