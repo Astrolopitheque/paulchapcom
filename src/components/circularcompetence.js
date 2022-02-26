@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
-const CircularCompetence = ({ children, ableness, size }) => {
+const CircularCompetence = ({ children, ableness, size, sx }) => {
   let color = 'blue';
   if(ableness < 25) color = 'red';
   else if(ableness < 50) color = 'orange';
@@ -15,22 +16,19 @@ const CircularCompetence = ({ children, ableness, size }) => {
   }, [ableness]);
 
   return (
-    <Box
-      p={1}
-      width={size}
-      bgcolor="#c5ccd7"
-      borderRadius="50%"
-      display="inline-flex"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <CircularProgress
-        variant="determinate"
-        value={progress}
-        size={size}
-        sx={{ color }}
-      />
-      <span style={{ position: 'absolute' }}>{children}</span>
+    <Box bgcolor="red" width={size} display="inline-flex" justifyContent="center" alignItems="center">
+    <CircularProgress
+      variant="determinate"
+      value={progress}
+      size={size}
+      sx={{
+        color,
+        bgcolor: '#c5ccd7',
+        borderRadius: 50,
+        p: 1,
+      }}
+    />
+    <Typography position="absolute" fontSize="50%">{children}</Typography>
     </Box>
   );
 }

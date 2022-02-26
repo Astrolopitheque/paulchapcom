@@ -66,7 +66,41 @@ const Index = () => {
         </Box>
         <StyledHeading align="right">Services proposés</StyledHeading>
         <StyledHeading>Mes compétences</StyledHeading>
-        <CircularCompetence ableness={90} size="min(100%, 600px)">Javascript</CircularCompetence>
+          Fuck these guys :
+          <Box display="flex" justifyContent="center">
+            <CircularCompetence
+              ableness={90}
+              size="max(15%, 100px)"
+            >
+              NodeJS
+            </CircularCompetence>
+            <CircularCompetence
+              ableness={90}
+              size="max(15%, 100px)"
+            >
+              Javascript
+            </CircularCompetence>
+            <CircularCompetence
+              ableness={85}
+              size="max(15%, 100px)"
+            >
+              Express
+            </CircularCompetence>
+          </Box>
+          <Box display="flex" justifyContent="center">
+            <CircularCompetence
+              ableness={80}
+              size="max(15%, 100px)"
+            >
+              React
+            </CircularCompetence>
+            <CircularCompetence
+              ableness={75}
+              size="max(15%, 100px)"
+            >
+              Gatsby
+            </CircularCompetence>
+          </Box>
         <StyledHeading align="right">Mon portfolio</StyledHeading>
         <StyledHeading>Tarifs</StyledHeading>
         <StyledHeading align="center">Contactez-moi !</StyledHeading>
