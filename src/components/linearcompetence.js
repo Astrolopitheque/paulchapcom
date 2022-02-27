@@ -33,7 +33,7 @@ const LinearCompetence = ({ text, progress, size }) => {
         variant='determinate'
         value={progress}
         color='inherit'
-        sx={{ p: 0.7, flexGrow: 1 }}
+        sx={{ p: 0.7, flexGrow: 1, borderRadius: 2 }}
       />
     </Box>
   );
