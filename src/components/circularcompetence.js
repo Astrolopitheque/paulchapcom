@@ -1,34 +1,41 @@
-import React, {useState, useEffect} from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
-const CircularCompetence = ({ children, ableness, size, sx }) => {
-  let color = 'blue';
-  if(ableness < 25) color = 'red';
-  else if(ableness < 50) color = 'orange';
-  else if(ableness < 75) color = 'yellow';
-  else if(ableness < 100) color = 'green';
-
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    setProgress(ableness);
-  }, [ableness]);
+const CircularCompetence = ({ text, ableness, size }) => {
+  let color = '#0066db'; // blue
+  if(ableness < 25) color = '#f60b0b'; // red
+  else if(ableness < 50) color = '#f16f0f'; // orange
+  else if(ableness < 75) color = '#fffb00'; // yellow
+  else if(ableness < 100) color = '#14c20b'; // green
 
   return (
-    <Box bgcolor="red" width={size} display="inline-flex" justifyContent="center" alignItems="center">
-    <CircularProgress
-      variant="determinate"
-      value={progress}
-      size={size}
-      sx={{
-        color,
-        bgcolor: '#c5ccd7',
-        borderRadius: 50,
-        p: 1,
-      }}
-    />
-    <Typography position="absolute" fontSize="50%">{children}</Typography>
+    <Box display="inline-block" width={size} height={size} mx={1} my={0.5}>
+      <CircularProgressbarWithChildren
+        value={ableness}
+        styles={{
+          root: {
+            padding: '8%',
+            backgroundColor: '#c5ccd7',
+            borderRadius: '50%',
+          },
+          trail: {
+            display: 'none',
+          },
+          path: {
+            stroke: color,
+          },
+          text: {
+            fill: '#353535',
+          }
+        }}
+      >
+        <Typography variant="h6" component="p" fontSize={{xs: '0.65em', md: '1.3em'}}>
+          {text}
+        </Typography>
+      </CircularProgressbarWithChildren>
     </Box>
   );
 }

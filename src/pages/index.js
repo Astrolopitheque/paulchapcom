@@ -66,40 +66,59 @@ const Index = () => {
         </Box>
         <StyledHeading align="right">Services proposés</StyledHeading>
         <StyledHeading>Mes compétences</StyledHeading>
-          Fuck these guys :
-          <Box display="flex" justifyContent="center">
+          TODO : linear progress
+          <Box textAlign="center">
             <CircularCompetence
               ableness={90}
-              size="max(15%, 100px)"
-            >
-              NodeJS
-            </CircularCompetence>
+              size="max(15%, 90px)"
+              text="JavaScript"
+            />
             <CircularCompetence
               ableness={90}
-              size="max(15%, 100px)"
-            >
-              Javascript
-            </CircularCompetence>
-            <CircularCompetence
-              ableness={85}
-              size="max(15%, 100px)"
-            >
-              Express
-            </CircularCompetence>
-          </Box>
-          <Box display="flex" justifyContent="center">
-            <CircularCompetence
-              ableness={80}
-              size="max(15%, 100px)"
-            >
-              React
-            </CircularCompetence>
+              size="max(15%, 90px)"
+              text="NodeJS"
+            />
             <CircularCompetence
               ableness={75}
-              size="max(15%, 100px)"
-            >
-              Gatsby
-            </CircularCompetence>
+              size="max(15%, 90px)"
+              text="Express.js"
+            />
+            <CircularCompetence
+              ableness={80}
+              size="max(15%, 90px)"
+              text="React"
+            />
+            <CircularCompetence
+              ableness={70}
+              size="max(15%, 90px)"
+              text="Gatsby"
+            />
+            <br/>
+            <CircularCompetence
+              ableness={10}
+              size="max(15%, 90px)"
+              text="Débutant"
+            />
+            <CircularCompetence
+              ableness={25}
+              size="max(15%, 90px)"
+              text="Novice"
+            />
+            <CircularCompetence
+              ableness={50}
+              size="max(15%, 90px)"
+              text="Intermédiaire"
+            />
+            <CircularCompetence
+              ableness={75}
+              size="max(15%, 90px)"
+              text="Avancé"
+            />
+            <CircularCompetence
+              ableness={100}
+              size="max(15%, 90px)"
+              text="Expert"
+            />
           </Box>
         <StyledHeading align="right">Mon portfolio</StyledHeading>
         <StyledHeading>Tarifs</StyledHeading>
