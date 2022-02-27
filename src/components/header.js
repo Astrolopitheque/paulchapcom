@@ -33,52 +33,52 @@ const Header = () => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="fixed" elevation={0} sx={{bgcolor: '#2b8273'}}>
+        <AppBar position='fixed' elevation={0} sx={{bgcolor: '#2b8273'}}>
           <Toolbar>
             <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open menu"
+              size='large'
+              edge='start'
+              color='inherit'
+              aria-label='open menu'
               sx={{ display: {md: 'none'}, mr: 2 }}
               onClick={openMenu}
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" letterSpacing={1.4} flexGrow={1}>
+            <Typography variant='h6' component='div' letterSpacing={1.4} flexGrow={1}>
               Paul Chaperon
             </Typography>
             <IconButton
-              size="large"
-              edge="end"
-              color="inherit"
-              title="Remonter en haut de la page"
-              aria-label="go top"
+              size='large'
+              edge='end'
+              color='inherit'
+              title='Remonter en haut de la page'
+              aria-label='go top'
               sx={{ mr: {xs: 0, sm: 3}, display: {md: 'none'} }}
               onClick={backToTop}
             >
               <ArrowUpwardRoundedIcon />
             </IconButton>
             <IconButton
-              size="large"
-              edge="end"
-              color="inherit"
-              aria-label="settings"
+              size='large'
+              edge='end'
+              color='inherit'
+              aria-label='settings'
             >
               <SettingsIcon />
             </IconButton>
           </Toolbar>
           <Stack
             display={{ xs: 'none', md: 'flex' }}
-            direction="row"
-            color="#353535"
-            bgcolor="white"
+            direction='row'
+            color='#353535'
+            bgcolor='white'
           >
             {
               sections.map(({text}, i) => 
                 <Button
                   key={text}
-                  color="inherit"
+                  color='inherit'
                   fullWidth
                   sx={{
                     py: 1.5,
@@ -95,7 +95,7 @@ const Header = () => {
         </AppBar>
       </Box>
       <Drawer
-        anchor="left"
+        anchor='left'
         open={drawer}
         onClose={() => setDrawer(false)}
         sx={{ display: {md: 'none'} }}
@@ -107,9 +107,9 @@ const Header = () => {
       >
         <Box>
           <IconButton
-            size="large"
-            color="inherit"
-            aria-label="close menu"
+            size='large'
+            color='inherit'
+            aria-label='close menu'
             onClick={closeMenu}
           >
             <CloseIcon />
@@ -119,7 +119,7 @@ const Header = () => {
           sections.map(({text}, i) => 
             <Button
               key={text}
-              color="inherit"
+              color='inherit'
               sx={{
                 px: 6,
                 py: 2,

@@ -16,10 +16,10 @@ const SocialButton = ({ icon, title, href }) => {
   return (
     <Tooltip title={title}>
       <IconButton
-        color="inherit"
+        color='inherit'
         href={href}
-        rel="noopener noreferrer"
-        target="_blank"
+        rel='noopener noreferrer'
+        target='_blank'
       >
         <IconElement />
       </IconButton>
@@ -34,29 +34,29 @@ SocialButton.defaultProps = {
 const Footer = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" elevation={0} sx={{ top: 'auto', bottom: 0, bgcolor: '#2b8273' }}>
+      <AppBar position='fixed' elevation={0} sx={{ top: 'auto', bottom: 0, bgcolor: '#2b8273' }}>
         <Toolbar sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
           <Typography mt={2} mb={{sm: 2}} sx={{ flexGrow: 1 }}>
-            Site développé par Paul Chaperon &copy; {new Date().getFullYear().toString()}{" "}
+            Site développé par Paul Chaperon &copy; {new Date().getFullYear().toString()}{' '}
           </Typography>
-          <Stack my={1} direction="row">
+          <Stack my={1} direction='row'>
             <SocialButton
               icon={GitHubIcon}
-              title="Astrolopitheque"
-              href="https://github.com/Astrolopitheque"
+              title='Astrolopitheque'
+              href='https://github.com/Astrolopitheque'
             />
             <SocialButton
               icon={InstagramIcon}
-              title="@paul.freelance"
-              href="https://www.instagram.com/paul.freelance/"
+              title='@paul.freelance'
+              href='https://www.instagram.com/paul.freelance/'
             />
             <SocialButton
               icon={TwitterIcon}
-              title="Prochainement :)"
+              title='Prochainement :)'
             />
             <SocialButton
               icon={LinkedInIcon}
-              title="Prochainement :)"
+              title='Prochainement :)'
             />
           </Stack>
         </Toolbar>
