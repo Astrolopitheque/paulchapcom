@@ -8,9 +8,10 @@ import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
-const StyledHeading = ({ children, align, color, sx }) => {
+const StyledHeading = ({ children, id, align, color, sx }) => {
   return (
     <Typography
+      id={id}
       variant='h2'
       fontSize={{xs: '1.9em', md: '3.5em'}}
       align={align}
@@ -43,7 +44,7 @@ const Index = () => {
         <Paper
           sx={{
             color: 'white',
-            bgcolor: '#69BAB8',
+            bgcolor: '#69bab8',
             width: {sm: '80%', md: '70%', lg: '60%'},
             borderRadius: 0,
             p: 3,
@@ -51,7 +52,7 @@ const Index = () => {
             textAlign: 'center'
           }}
         >
-          <StyledHeading align='center' sx={{ mt: 0 }}>Qui suis-je ?</StyledHeading>
+          <StyledHeading id='whoami' align='center' sx={{ mt: 0 }}>Qui suis-je ?</StyledHeading>
           <Box display='flex' flexDirection='column' alignItems={'flex-end'}>
             <Typography mb={2} align='justify' width={{md: '90%'}}>
               <b>Passionné d'informatique</b> depuis mon enfance,
@@ -65,8 +66,8 @@ const Index = () => {
           </Box>
         </Paper>
         </Box>
-        <StyledHeading align='right'>Services proposés</StyledHeading>
-        <StyledHeading>Mes compétences</StyledHeading>
+        <StyledHeading id='services' align='right'>Services proposés</StyledHeading>
+        <StyledHeading id='skills'>Mes compétences</StyledHeading>
           <Box textAlign='center'>
             <CircularCompetence
               progress={90}
@@ -120,9 +121,9 @@ const Index = () => {
               text='Expert'
             />
           </Box>
-        <StyledHeading align='right'>Mon portfolio</StyledHeading>
-        <StyledHeading>Tarifs</StyledHeading>
-        <StyledHeading align='center'>Contactez-moi !</StyledHeading>
+        <StyledHeading id='portfolio' align='right'>Mon portfolio</StyledHeading>
+        <StyledHeading id='prices'>Tarifs</StyledHeading>
+        <StyledHeading id='contact' align='center'>Contactez-moi !</StyledHeading>
         Nadia mon bb ❤
       </Container>
     </Layout>

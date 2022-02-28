@@ -5,12 +5,6 @@ import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 const CircularCompetence = ({ text, progress, size }) => {
-  let color = '#0066db'; // blue
-  if(progress < 25) color = '#f60b0b'; // red
-  else if(progress < 50) color = '#f16f0f'; // orange
-  else if(progress < 75) color = '#fffb00'; // yellow
-  else if(progress < 100) color = '#14c20b'; // green
-
   return (
     <Box display='inline-block' width={size} height={size} mx={1} my={0.5}>
       <CircularProgressbarWithChildren
@@ -18,22 +12,22 @@ const CircularCompetence = ({ text, progress, size }) => {
         styles={{
           root: {
             padding: '6%',
-            backgroundColor: '#c5ccd7',
+            backgroundColor: '#822b3a',
             borderRadius: '50%',
           },
           trail: {
             display: 'none',
           },
           path: {
-            stroke: color,
+            stroke: '#ffffff',
           },
         }}
       >
         <Typography
           variant='h6'
           component='p'
-          color='inherit'
-          fontSize={{xs: '0.65em', md: '1.3em'}}
+          color='#ffffff'
+          fontSize={{ xs: '0.65em', md: '1.3em' }}
         >
           {text}
         </Typography>

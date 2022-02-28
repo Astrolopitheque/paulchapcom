@@ -13,22 +13,24 @@ import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { scrollToEl } from '../utils';
 
-const backToTop = () => scrollToEl('#page-top');
-
 const sections = [
-  {text: 'accueil'},
-  {text: 'services'},
-  {text: 'compétences'},
-  {text: 'portfolio'},
-  {text: 'tarifs'},
-  {text: 'contact'},
+  { text: 'accueil', id: '#whoami' },
+  { text: 'services', id: '#services' },
+  { text: 'compétences', id: '#skills' },
+  { text: 'portfolio', id: '#portfolio' },
+  { text: 'tarifs', id: '#prices' },
+  { text: 'contact', id: '#contact' },
 ];
 
 const Header = () => {
   const [drawer, setDrawer] = useState(false);
-
   const openMenu = () => setDrawer(true);
   const closeMenu = () => setDrawer(false);
+  const backToTop = () => scrollToEl('#page-top');
+  const goToSection = selector => () => {
+    closeMenu();
+    scrollToEl(selector, { offset: -110 });
+  }
 
   return (
     <>
@@ -54,7 +56,7 @@ const Header = () => {
               color='inherit'
               title='Remonter en haut de la page'
               aria-label='go top'
-              sx={{ mr: {xs: 0, sm: 3}, display: {md: 'none'} }}
+              sx={{ mr: {xs: 0, sm: 2}, display: {md: 'none'} }}
               onClick={backToTop}
             >
               <ArrowUpwardRoundedIcon />
@@ -75,11 +77,12 @@ const Header = () => {
             bgcolor='white'
           >
             {
-              sections.map(({text}, i) => 
+              sections.map(({text, id}, i) => 
                 <Button
                   key={text}
                   color='inherit'
                   fullWidth
+                  onClick={goToSection(id)}
                   sx={{
                     py: 1.5,
                     borderRadius: 0,
@@ -97,7 +100,7 @@ const Header = () => {
       <Drawer
         anchor='left'
         open={drawer}
-        onClose={() => setDrawer(false)}
+        onClose={closeMenu}
         sx={{ display: {md: 'none'} }}
         PaperProps={{
           sx: {
@@ -116,10 +119,11 @@ const Header = () => {
           </IconButton>
         </Box>
         {
-          sections.map(({text}, i) => 
+          sections.map(({text, id}, i) => 
             <Button
               key={text}
               color='inherit'
+              onClick={goToSection(id)}
               sx={{
                 px: 6,
                 py: 2,

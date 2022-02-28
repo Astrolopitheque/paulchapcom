@@ -5,19 +5,13 @@ import LinearProgress from '@mui/material/LinearProgress';
 import 'react-circular-progressbar/dist/styles.css';
 
 const LinearCompetence = ({ text, progress, size }) => {
-  let color = '#0066db'; // blue
-  if(progress < 25) color = '#f60b0b'; // red
-  else if(progress < 50) color = '#f16f0f'; // orange
-  else if(progress < 75) color = '#fffb00'; // yellow
-  else if(progress < 100) color = '#14c20b'; // green
-
   return (
     <Box
       display='flex'
       alignItems='center'
       mx={1}
       my={0.5}
-      color={color}
+      color='#822b3a'
     >
       <Typography
         variant='h6'
