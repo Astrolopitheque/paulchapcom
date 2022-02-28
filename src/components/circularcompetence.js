@@ -27,7 +27,8 @@ const CircularCompetence = ({ text, progress, size }) => {
           variant='h6'
           component='p'
           color='#ffffff'
-          fontSize={{ xs: '0.65em', md: '1.3em' }}
+          letterSpacing={1.5}
+          fontSize={{ xs: '0.55em', md: '1.2em' }}
         >
           {text}
         </Typography>

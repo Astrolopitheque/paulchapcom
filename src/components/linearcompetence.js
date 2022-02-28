@@ -16,7 +16,7 @@ const LinearCompetence = ({ text, progress, size }) => {
       <Typography
         variant='h6'
         component='p'
-        fontSize={{ xs: '0.7em', md: '1.1em' }}
+        fontSize={{ xs: '1em', md: '1.1em' }}
         color='#353535'
         width={{ xs: '35%', md: '15%' }}
         textAlign='left'
