@@ -9,9 +9,10 @@ const CircularCompetence = ({ text, progress, size }) => {
     <Box display='inline-block' width={size} height={size} mx={1} my={0.5}>
       <CircularProgressbarWithChildren
         value={progress}
+        strokeWidth={5}
         styles={{
           root: {
-            padding: '6%',
+            padding: '8%',
             backgroundColor: '#822b3a',
             borderRadius: '50%',
           },
@@ -27,8 +28,9 @@ const CircularCompetence = ({ text, progress, size }) => {
           variant='h6'
           component='p'
           color='#ffffff'
+          textTransform='uppercase'
           letterSpacing={1.5}
-          fontSize={{ xs: '0.55em', md: '1.2em' }}
+          fontSize={{ xs: '0.45em', md: '1em' }}
         >
           {text}
         </Typography>
