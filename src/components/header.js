@@ -35,7 +35,7 @@ const Header = () => {
   const backToTop = () => scrollToEl('#page-top');
   const goToSection = selector => () => {
     closeMenu();
-    scrollToEl(selector, { offset: bigHeader ? -120 : -70 }); // counter the header
+    scrollToEl(selector, { offset: bigHeader ? -120 : -80 }); // counter the header
   }
 
   return (

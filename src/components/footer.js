@@ -20,6 +20,9 @@ const SocialButton = ({ icon, title, href }) => {
         href={href}
         rel='noopener noreferrer'
         target='_blank'
+        sx={{
+          mx: 0.5,
+        }}
       >
         <IconElement />
       </IconButton>

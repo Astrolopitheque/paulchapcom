@@ -49,7 +49,7 @@ const Index = () => {
               width: {sm: '80%', md: '70%', lg: '60%'},
               borderRadius: 0,
               p: 3,
-              mb: 4,
+              mb: 2,
               textAlign: 'center'
             }}
           >
@@ -95,6 +95,24 @@ const Index = () => {
         />
         <StyledHeading id='portfolio' align='right'>Mon portfolio</StyledHeading>
         <StyledHeading id='prices'>Tarifs</StyledHeading>
+        TODO : rendre le tableau bien drippy issou + le remplir coijdsgvlsiudwo
+        <table style={{ border: '1px solid #333' }}>
+          <thead>
+            <tr>
+              <th colspan='2' style={{ backgroundColor: '#333', color: '#fff' }}>Agneugneu devis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={{ border: '1px solid #333' }}>Tarif horaire</td>
+              <td style={{ border: '1px solid #333' }}>Tarif journalier moyen</td>
+            </tr>
+            <tr>
+              <td style={{ border: '1px solid #333' }}>Jsp €/heure</td>
+              <td style={{ border: '1px solid #333' }}>Aucune idée €/jour</td>
+            </tr>
+          </tbody>
+        </table>
         <StyledHeading id='contact' align='center'>Contactez-moi !</StyledHeading>
         Nadia mon bb ❤
       </Container>
