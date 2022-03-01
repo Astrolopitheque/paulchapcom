@@ -16,7 +16,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { scrollToEl } from '../utils';
 
 const sections = [
-  { text: 'accueil', id: '#whoami' },
+  { text: 'accueil', id: '#page-top' },
   { text: 'services', id: '#services' },
   { text: 'compétences', id: '#skills' },
   { text: 'portfolio', id: '#portfolio' },

@@ -42,7 +42,6 @@ const Index = () => {
       <Container>
         <Box display='flex' justifyContent='center'>
           <Paper
-            id='whoami'
             sx={{
               color: 'white',
               bgcolor: '#69bab8',
