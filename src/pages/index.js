@@ -1,8 +1,7 @@
 import * as React from 'react';
 import Layout from '../components/layout';
 import Metadata from '../components/metadata';
-import CircularCompetence from '../components/circularcompetence';
-import LinearCompetence from '../components/linearcompetence';
+import Competence from '../components/competence';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
@@ -16,7 +15,8 @@ const StyledHeading = ({ children, id, align, color, sx }) => {
       fontSize={{xs: '1.9em', md: '3.5em'}}
       align={align}
       sx={{
-        my: 3,
+        mt: 6,
+        mb: 3,
         color,
         ...sx,
       }}
@@ -69,59 +69,30 @@ const Index = () => {
         </Box>
         <StyledHeading id='services' align='right'>Services proposés</StyledHeading>
         <StyledHeading id='skills'>Mes compétences</StyledHeading>
-          <Box textAlign='center'>
-            <CircularCompetence
-              progress={90}
-              size='max(15%, 90px)'
-              text='JavaScript'
-            />
-            <CircularCompetence
-              progress={90}
-              size='max(15%, 90px)'
-              text='NodeJS'
-            />
-            <CircularCompetence
-              progress={75}
-              size='max(15%, 90px)'
-              text='Express.js'
-            />
-            <CircularCompetence
-              progress={80}
-              size='max(15%, 90px)'
-              text='React'
-            />
-            <CircularCompetence
-              progress={70}
-              size='max(15%, 90px)'
-              text='Gatsby'
-            />
-            <div style={{height: '20px' }}></div>
-            <LinearCompetence
-              progress={10}
-              size='max(15%, 90px)'
-              text='Débutant'
-            />
-            <LinearCompetence
-              progress={25}
-              size='max(15%, 90px)'
-              text='Novice'
-            />
-            <LinearCompetence
-              progress={50}
-              size='max(15%, 90px)'
-              text='Intermédiaire'
-            />
-            <LinearCompetence
-              progress={75}
-              size='max(15%, 90px)'
-              text='Avancé'
-            />
-            <LinearCompetence
-              progress={100}
-              size='max(15%, 90px)'
-              text='Expert'
-            />
-          </Box>
+        <Competence
+          progress={90}
+          text='Javascript, JSX, React'
+        />
+        <Competence
+          progress={85}
+          text='NodeJS, Express, Gatsby'
+        />
+        <Competence
+          progress={80}
+          text='HTML, SEO'
+        />
+        <Competence
+          progress={70}
+          text='CSS, SASS, Bootstrap'
+        />
+        <Competence
+          progress={65}
+          text='MySQL / SQL • MongoDB'
+        />
+        <Competence
+          progress={50}
+          text='PHP'
+        />
         <StyledHeading id='portfolio' align='right'>Mon portfolio</StyledHeading>
         <StyledHeading id='prices'>Tarifs</StyledHeading>
         <StyledHeading id='contact' align='center'>Contactez-moi !</StyledHeading>

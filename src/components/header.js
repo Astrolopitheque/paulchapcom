@@ -11,6 +11,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { scrollToEl } from '../utils';
 
 const sections = [
@@ -23,13 +25,17 @@ const sections = [
 ];
 
 const Header = () => {
+  const theme = useTheme();
+  const bigHeader = useMediaQuery(theme.breakpoints.up('md'));
+
   const [drawer, setDrawer] = useState(false);
   const openMenu = () => setDrawer(true);
   const closeMenu = () => setDrawer(false);
+
   const backToTop = () => scrollToEl('#page-top');
   const goToSection = selector => () => {
     closeMenu();
-    scrollToEl(selector, { offset: -120 }); // counter the header
+    scrollToEl(selector, { offset: bigHeader ? -120 : -70 }); // counter the header
   }
 
   return (
