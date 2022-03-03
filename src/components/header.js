@@ -124,24 +124,26 @@ const Header = () => {
             <CloseIcon />
           </IconButton>
         </Box>
-        {
-          sections.map(({text, id}, i) => 
-            <Button
-              key={text}
-              color='inherit'
-              onClick={goToSection(id)}
-              sx={{
-                px: 6,
-                py: 2,
-                borderRadius: 0,
-                justifyContent: 'flex-start',
-                letterSpacing: 2,
-              }}
-            >
-              {text}
-            </Button>
-          )
-        }
+        <Stack overflow='scroll'>
+          {
+            sections.map(({text, id}, i) => 
+              <Button
+                key={text}
+                color='inherit'
+                onClick={goToSection(id)}
+                sx={{
+                  px: 6,
+                  py: 2,
+                  borderRadius: 0,
+                  justifyContent: 'flex-start',
+                  letterSpacing: 2,
+                }}
+              >
+                {text}
+              </Button>
+            )
+          }
+        </Stack>
       </Drawer>
     </>
   );

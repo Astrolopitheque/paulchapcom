@@ -98,7 +98,7 @@ const Index = () => {
           <thead>
             <tr>
               <th colspan={2} style={{ backgroundColor: '#333', color: '#fff' }}>
-                <StyledHeading id='prices'>Tarifs</StyledHeading>
+                <StyledHeading id='prices' align='center'>Tarifs</StyledHeading>
               </th>
             </tr>
           </thead>
