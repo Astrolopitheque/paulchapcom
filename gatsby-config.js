@@ -4,6 +4,7 @@ module.exports = {
       siteUrl: `https://www.paulchap.com`,
     },
     plugins: [
+      'gatsby-plugin-react-helmet',
       {
         resolve: 'gatsby-plugin-manifest',
         options: {

@@ -1,12 +1,16 @@
 import * as React from 'react';
+import Box from '@mui/material/Box';
 import StyledHeading from '../styledheading';
+import styled from '@emotion/styled';
+
+const TableCell = styled.td`
+  border: 1px solid #333;
+`;
 
 const PricesSection = () => {
   return (
-    <>
-      <StyledHeading id='portfolio' align='right'>Mon portfolio</StyledHeading>
-      TODO : rendre le tableau bien drippy issou + le remplir coijdsgvlsiudwo
-      <table style={{ border: '1px solid #333' }}>
+    <Box display='flex' justifyContent='center'>
+      <table style={{ width: 'min(100%, 800px)', border: '1px solid #333' }}>
         <thead>
           <tr>
             <th colspan={2} style={{ backgroundColor: '#333', color: '#fff' }}>
@@ -16,19 +20,19 @@ const PricesSection = () => {
         </thead>
         <tbody>
           <tr>
-            <td colspan={2} style={{ border: '1px solid #333' }}>Faut un devis bozo</td>
+            <TableCell colspan={2}>Faut un devis bozo</TableCell>
           </tr>
           <tr>
-            <td style={{ border: '1px solid #333' }}>Tarif horaire</td>
-            <td style={{ border: '1px solid #333' }}>Tarif journalier moyen</td>
+            <TableCell>Tarif horaire</TableCell>
+            <TableCell>Tarif journalier moyen</TableCell>
           </tr>
           <tr>
-            <td style={{ border: '1px solid #333' }}>Jsp €/heure</td>
-            <td style={{ border: '1px solid #333' }}>Aucune idée €/jour</td>
+            <TableCell>Jsp €/heure</TableCell>
+            <TableCell>Aucune idée €/jour</TableCell>
           </tr>
         </tbody>
       </table>
-    </>
+    </Box>
   );
 }
 
