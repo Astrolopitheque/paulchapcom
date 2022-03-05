@@ -22,7 +22,7 @@ const PricesSection = () => {
         <thead>
           <tr>
             <th 
-              colspan={2}
+              colSpan={2}
               style={{
                 backgroundColor: '#2b8273',
                 color: '#fff',
@@ -33,7 +33,7 @@ const PricesSection = () => {
                 align='center'
                 sx={{
                   m: 0,
-                  p: 3,
+                  p: 2,
                 }}
               >
                 Tarifs

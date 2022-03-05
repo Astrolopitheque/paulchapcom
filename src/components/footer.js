@@ -30,14 +30,10 @@ const SocialButton = ({ icon, title, href }) => {
   );
 }
 
-SocialButton.defaultProps = {
-  delayAnimation: 0,
-}
-
 const Footer = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='fixed' elevation={0} sx={{ top: 'auto', bottom: 0, bgcolor: '#2b8273' }}>
+      <AppBar position='relative' elevation={0} sx={{ mt: 4, bgcolor: '#2b8273' }}>
         <Toolbar sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
           <Typography mt={2} mb={{sm: 2}} sx={{ flexGrow: 1 }}>
             Site développé par Paul Chaperon &copy; {new Date().getFullYear().toString()}{' '}

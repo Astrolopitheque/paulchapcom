@@ -20,7 +20,6 @@ const Layout = ({children}) => {
       <main>
         {children}
       </main>
-      <Toolbar sx={{ m: 1.5, height: {xs: '100px', md: '70px'} }}/>
       <Footer />
     </StylesProvider>
   );
