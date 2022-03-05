@@ -16,6 +16,7 @@ const Index = () => {
         <StyledHeading id='services' align='right'>Services proposés</StyledHeading>
         <SkillsSection />
         <StyledHeading id='portfolio' align='right'>Mon portfolio</StyledHeading>
+        Contenus et styles non définitifs
         <PricesSection />
         <StyledHeading id='contact' align='center'>Contactez-moi !</StyledHeading>
         Nadia mon bb ❤
