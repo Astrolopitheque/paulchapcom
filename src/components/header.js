@@ -41,8 +41,8 @@ const Header = () => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position='fixed' elevation={0} sx={{bgcolor: '#2b8273'}}>
-          <Toolbar>
+        <AppBar position='fixed' elevation={0} sx={{bgcolor: '#fff'}}>
+          <Toolbar sx={{ bgcolor: '#2b8273'}}>
             <IconButton
               size='large'
               edge='start'
@@ -80,7 +80,6 @@ const Header = () => {
             display={{ xs: 'none', md: 'flex' }}
             direction='row'
             color='#353535'
-            bgcolor='white'
           >
             {
               sections.map(({text, id}, i) => 
