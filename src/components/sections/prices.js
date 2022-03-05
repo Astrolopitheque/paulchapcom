@@ -13,7 +13,6 @@ const PricesSection = () => {
     <Box display='flex' justifyContent='center'>
       <table
         style={{
-          tableLayout: 'fixed',
           width: 'min(100%, 800px)',
           border: '1px solid #333',
           borderCollapse: 'separate',
