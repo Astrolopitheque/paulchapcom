@@ -1,5 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import StyledHeading from '../styledheading';
 import styled from '@emotion/styled';
 
@@ -10,13 +12,13 @@ const TableCell = styled.td`
 
 const PricesSection = () => {
   return (
-    <Box display='flex' justifyContent='center'>
+    <Box display='flex' flexDirection='column' alignItems='center'>
       <table
         style={{
-          width: 'min(100%, 800px)',
+          width: 'min(100%, 700px)',
           border: '1px solid #333',
           borderCollapse: 'separate',
-          borderSpacing: 3,
+          borderSpacing: 4,
         }}
       >
         <thead>
@@ -46,11 +48,24 @@ const PricesSection = () => {
             <TableCell
               colSpan={2}
               style={{
-                textAlign: 'center',
-                border: '1px solid #333',
+                padding: 0,
               }}
             >
-              Demander un devis <b>gratuitement</b>
+              <Button
+                variant='outlined'
+                fullWidth
+                sx={{
+                  p: '15px',
+                  color: '#333',
+                  borderColor: '#333',
+                  borderRadius: 0,
+                }}
+              >
+                Demander un devis
+                <b style={{marginLeft: '0.3em'}}>
+                  gratuitement
+                </b>
+              </Button>
             </TableCell>
           </tr>
           <tr style={{ color: '#fff', backgroundColor: '#822b3a' }}>
@@ -58,11 +73,12 @@ const PricesSection = () => {
             <TableCell>Tarif journalier moyen</TableCell>
           </tr>
           <tr style={{ backgroundColor: '#c8b0b9' }}>
-            <TableCell>Jsp €/heure</TableCell>
+            <TableCell>55 €/heure</TableCell>
             <TableCell>250 €/jour</TableCell>
           </tr>
         </tbody>
       </table>
+      <Typography mt={2}>Un jour ouvré ≈ 5h de travail</Typography>
     </Box>
   );
 }
