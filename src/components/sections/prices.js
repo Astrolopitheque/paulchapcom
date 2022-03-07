@@ -57,7 +57,7 @@ const PricesSection = () => {
                 sx={{
                   p: '15px',
                   color: '#333',
-                  borderColor: '#333',
+                  borderColor: '#333 !important',
                   borderRadius: 0,
                 }}
               >
