@@ -49,7 +49,7 @@ const ContactSection = () => {
         </ContactInfo>
         <ContactInfo icon={ SettingsIcon } name='Siren'>
           <Box display='flex' justifyContent='center'>
-            [A remplir]
+            905 046 710
             <Tooltip title={ sirenDescription } sx={{ ml: 1, cursor: 'pointer' }}>
               <HelpIcon />
             </Tooltip>
