@@ -52,9 +52,9 @@ const Header = () => {
               <MenuIcon />
             </IconButton>
             <Typography
-              variant='h5'
               component='div'
               fontFamily='Dosis, sans-serif'
+              fontSize={{ xs: '1.3em', sm: '1.4em' }}
               letterSpacing={1.4}
               flexGrow={1}
             >
