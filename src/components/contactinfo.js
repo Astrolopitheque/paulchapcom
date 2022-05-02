@@ -11,7 +11,7 @@ const ContactInfo = ({ icon, name, children }) => {
         border: '1px solid #333',
         borderCollapse: 'separate',
         borderSpacing: 4,
-        minWidth: '150px',
+        minWidth: '200px',
         textAlign: 'center',
       }}
     >
@@ -31,7 +31,7 @@ const ContactInfo = ({ icon, name, children }) => {
             <Icon
               sx={{
                 position: 'absolute',
-                left: 10,
+                left: 7,
                 fontSize: '1.5em',
               }}
             />
@@ -45,7 +45,7 @@ const ContactInfo = ({ icon, name, children }) => {
             style={{
               fontWeight: 'bold',
               backgroundColor: '#c8b0b9',
-              padding: 15,
+              padding: 12,
             }}
           >
             { children }

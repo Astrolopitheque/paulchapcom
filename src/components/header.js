@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Drawer from '@mui/material/Drawer';
@@ -9,7 +9,6 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import HomeIcon from '@mui/icons-material/Home';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { scrollToEl } from '../utils';
@@ -38,67 +37,55 @@ const Header = () => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position='fixed' elevation={0} sx={{bgcolor: '#fff'}}>
-          <Toolbar sx={{ bgcolor: '#2b8273' }}>
-            <IconButton
-              size='large'
-              edge='start'
-              color='inherit'
-              aria-label='open menu'
-              sx={{ display: {md: 'none'}, mr: 2 }}
-              onClick={openMenu}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography
-              component='div'
-              fontFamily='Dosis, sans-serif'
-              fontSize={{ xs: '1.3em', sm: '1.4em' }}
-              letterSpacing={1.4}
-              flexGrow={1}
-            >
-              Paul Chaperon
-              <span style={{ color: '#353535' }}>.com</span>
-            </Typography>
-            <IconButton
-              size='large'
-              edge='end'
-              color='inherit'
-              title='Remonter en haut de la page'
-              aria-label='go top'
-              sx={{ display: {md: 'none'} }}
-              onClick={() => scrollToEl('#page-top')}
-            >
-              <HomeIcon />
-            </IconButton>
-          </Toolbar>
-          <Stack
-            display={{ xs: 'none', md: 'flex' }}
-            direction='row'
-            color='#353535'
+      <AppBar position='fixed' elevation={0} sx={{bgcolor: '#fff'}}>
+        <Toolbar sx={{ bgcolor: '#2b8273' }}>
+          <IconButton
+            size='large'
+            edge='start'
+            color='inherit'
+            aria-label='open menu'
+            sx={{ display: {md: 'none'}, mr: 2 }}
+            onClick={openMenu}
           >
-            {
-              sections.map(({text, id}, i) => 
-                <Button
-                  key={text}
-                  color='inherit'
-                  fullWidth
-                  onClick={() => goToSection(id)}
-                  sx={{
-                    py: 1.5,
-                    borderRadius: 0,
-                    fontSize: '0.7em',
-                    letterSpacing: 2,
-                  }}
-                >
-                  {text}
-                </Button>
-              )
-            }
-          </Stack>
-        </AppBar>
-      </Box>
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            component='div'
+            fontFamily='Dosis, sans-serif'
+            fontSize={{ xs: '1.3em', sm: '1.4em' }}
+            letterSpacing={1.4}
+            sx={{ cursor: 'pointer' }}
+            onClick={() => scrollToEl('#page-top')}
+          >
+            Paul Chaperon
+            <span style={{ color: '#353535' }}>.com</span>
+          </Typography>
+        </Toolbar>
+        <Stack
+          display={{ xs: 'none', md: 'flex' }}
+          direction='row'
+          color='#353535'
+        >
+          {
+            sections.map(({text, id}, i) => 
+              <Button
+                key={text}
+                color='inherit'
+                fullWidth
+                onClick={() => goToSection(id)}
+                sx={{
+                  py: 1.5,
+                  borderRadius: 0,
+                  fontSize: '0.7em',
+                  letterSpacing: 2,
+                }}
+              >
+                {text}
+              </Button>
+            )
+          }
+        </Stack>
+      </AppBar>
       <Drawer
         anchor='left'
         open={drawer}

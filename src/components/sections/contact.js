@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import StyledHeading from '../styledheading';
 import Typography from '@mui/material/Typography';
 import ContactInfo from '../contactinfo';
@@ -20,7 +21,7 @@ const ContactSection = () => {
     <section id='contact'>
       <StyledHeading>Contactez-moi !</StyledHeading>
       <Typography
-        color='#666' // your soul is mine now
+        color='#777'
         textAlign='center'
         fontFamily='Roboto Condensed, sans-serif'
         fontWeight={700}
@@ -29,13 +30,14 @@ const ContactSection = () => {
         Une idée ? Un projet ? N'hésitez pas à demander un devis, c'est gratuit !
       </Typography>
       <Box
-        overflow={{ xs: 'scroll', sm: 'visible' }}
+        display='flex'
+        justifyContent='center'
         my={2}
       >
-        <Box
-          display='flex'
-          justifyContent={{ sm: 'center' }}
-          width={630}
+        <Stack
+          direction={{ xs: 'column', md: 'row' }}
+          width={{ xs: '300px', md: '100%' }}
+          justifyContent='center'
         >
           <ContactInfo icon={ LocationOnIcon } name='Adresse'>
             Bagnolet 93170, France
@@ -58,7 +60,7 @@ const ContactSection = () => {
               </Tooltip>
             </Box>
           </ContactInfo>
-        </Box>
+        </Stack>
       </Box>
       <Typography
         textAlign='center'

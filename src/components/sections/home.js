@@ -15,7 +15,6 @@ const HomeSection = () => {
             width: {sm: '80%', md: '70%', lg: '60%'},
             borderRadius: 0,
             p: 3,
-            mb: 2,
             textAlign: 'center'
           }}
         >
