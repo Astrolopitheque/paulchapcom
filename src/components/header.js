@@ -40,7 +40,7 @@ const Header = () => {
     <>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position='fixed' elevation={0} sx={{bgcolor: '#fff'}}>
-          <Toolbar sx={{ bgcolor: '#2b8273'}}>
+          <Toolbar sx={{ bgcolor: '#2b8273' }}>
             <IconButton
               size='large'
               edge='start'
@@ -51,8 +51,15 @@ const Header = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant='h6' component='div' letterSpacing={1.4} flexGrow={1}>
+            <Typography
+              variant='h6'
+              component='div'
+              fontFamily='Dosis, sans-serif'
+              letterSpacing={1.4}
+              flexGrow={1}
+            >
               Paul Chaperon
+              <span style={{ color: '#353535' }}>.com</span>
             </Typography>
             <IconButton
               size='large'

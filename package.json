@@ -4,7 +4,11 @@
   "private": true,
   "description": "PaulChap.com",
   "keywords": [
-    "gatsby", "react", "paul", "chaperon", "website"
+    "gatsby",
+    "react",
+    "paul",
+    "chaperon",
+    "website"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -16,6 +20,7 @@
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/dosis": "^4.5.8",
     "@fontsource/roboto": "^4.5.3",
     "@fontsource/roboto-condensed": "^4.5.8",
     "@mui/icons-material": "^5.4.2",
