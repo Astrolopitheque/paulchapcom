@@ -29,32 +29,36 @@ const ContactSection = () => {
         Une idée ? Un projet ? N'hésitez pas à demander un devis, c'est gratuit !
       </Typography>
       <Box
-        display='flex'
-        justifyContent={{ sm: 'center' }}
         overflow={{ xs: 'scroll', sm: 'visible' }}
         my={2}
       >
-        <ContactInfo icon={ LocationOnIcon } name='Adresse'>
-          Bagnolet 93170, France
-        </ContactInfo>
-        <ContactInfo icon={ EmailIcon } name='E-Mail'>
-          <a 
-            href='mailto:paul@paulchap.com'
-            style={{
-              color: 'inherit',
-            }}
-          >
-            paul@paulchap.com
-          </a>
-        </ContactInfo>
-        <ContactInfo icon={ SettingsIcon } name='Siren'>
-          <Box display='flex' justifyContent='center'>
-            905 046 710
-            <Tooltip title={ sirenDescription } sx={{ ml: 1, cursor: 'pointer' }}>
-              <HelpIcon />
-            </Tooltip>
-          </Box>
-        </ContactInfo>
+        <Box
+          display='flex'
+          justifyContent={{ sm: 'center' }}
+          width={630}
+        >
+          <ContactInfo icon={ LocationOnIcon } name='Adresse'>
+            Bagnolet 93170, France
+          </ContactInfo>
+          <ContactInfo icon={ EmailIcon } name='E-Mail'>
+            <a 
+              href='mailto:paul@paulchap.com'
+              style={{
+                color: 'inherit',
+              }}
+            >
+              paul@paulchap.com
+            </a>
+          </ContactInfo>
+          <ContactInfo icon={ SettingsIcon } name='Siren'>
+            <Box display='flex' justifyContent='center'>
+              905 046 710
+              <Tooltip title={ sirenDescription } sx={{ ml: 1, cursor: 'pointer' }}>
+                <HelpIcon />
+              </Tooltip>
+            </Box>
+          </ContactInfo>
+        </Box>
       </Box>
       <Typography
         textAlign='center'
