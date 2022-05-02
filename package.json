@@ -1,10 +1,10 @@
 {
-  "name": "paul-chap.com",
+  "name": "paulchap.com",
   "version": "1.0.0",
   "private": true,
   "description": "PaulChap.com",
   "keywords": [
-    "gatsby"
+    "gatsby", "react", "paul", "chaperon", "website"
   ],
   "scripts": {
     "develop": "gatsby develop",

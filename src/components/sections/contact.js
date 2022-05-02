@@ -32,7 +32,7 @@ const ContactSection = () => {
         display='flex'
         justifyContent={{ sm: 'center' }}
         overflow={{ xs: 'scroll', sm: 'visible' }}
-        mb={2}
+        my={2}
       >
         <ContactInfo icon={ LocationOnIcon } name='Adresse'>
           Bagnolet 93170, France
