@@ -6,6 +6,7 @@ import StyledHeading from '../components/styledheading';
 import HomeSection from '../components/sections/home';
 import SkillsSection from '../components/sections/skills';
 import PricesSection from '../components/sections/prices';
+import ContactSection from '../components/sections/contact';
 
 const Index = () => {
   return (
@@ -13,12 +14,12 @@ const Index = () => {
       <Metadata />
       <Container>
         <HomeSection />
-        <StyledHeading id='services' align='right'>Services proposés</StyledHeading>
+        <section id='services'>
+          <StyledHeading align='right'>Services proposés</StyledHeading>
+        </section>
         <SkillsSection />
-        <StyledHeading id='portfolio' align='right'>Mon portfolio</StyledHeading>
         <PricesSection />
-        <StyledHeading id='contact' align='center'>Contactez-moi !</StyledHeading>
-        Nadia mon bb ❤
+        <ContactSection />
       </Container>
     </Layout>
   );

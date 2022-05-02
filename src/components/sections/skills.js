@@ -5,9 +5,9 @@ import Competence from '../competence';
 
 const SkillsSection = () => {
   return (
-    <>
-      <StyledHeading id='skills'>Mes compétences</StyledHeading>
-      <Box display='flex' justifyContent='center'>
+    <section id='skills'>
+      <StyledHeading>Mes compétences</StyledHeading>
+      <Box display='flex' justifyContent='center' mb={5}>
         <Box width='min(100%, 800px)'>
           <Competence
             progress={90}
@@ -35,7 +35,7 @@ const SkillsSection = () => {
           />
         </Box>
       </Box>
-    </>
+    </section>
   );
 }
 

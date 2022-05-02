@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 
-const StyledHeading = ({ children, id, align, color, sx }) => {
+const StyledHeading = ({ children, color, sx }) => {
   return (
     <Typography
-      id={id}
+      fontFamily='Roboto Condensed, sans-serif'
       variant='h2'
-      fontSize={{xs: '1.9em', md: '3.5em'}}
-      align={align}
+      fontSize={{xs: '1.9em', md: '2.8em'}}
+      align='center'
       sx={{
         mt: 6,
         mb: 3,
@@ -15,12 +15,7 @@ const StyledHeading = ({ children, id, align, color, sx }) => {
         ...sx,
       }}
     >
-      {(align === 'left' || align === 'justify') && '>>> '}
-      {align === 'right' && '• '}
-      {align === 'center' && '— '}
       {children}
-      {align === 'center' && ' —'}
-      {align === 'right' && ' •'}
     </Typography>
   );
 }

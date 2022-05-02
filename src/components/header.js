@@ -9,8 +9,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import ArrowUpwardRoundedIcon from '@mui/icons-material/ArrowUpwardRounded';
-import SettingsIcon from '@mui/icons-material/Settings';
+import HomeIcon from '@mui/icons-material/Home';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { scrollToEl } from '../utils';
@@ -19,7 +18,7 @@ const sections = [
   { text: 'accueil', id: '#page-top' },
   { text: 'services', id: '#services' },
   { text: 'compétences', id: '#skills' },
-  { text: 'portfolio', id: '#portfolio' },
+  //{ text: 'portfolio', id: '#portfolio' },
   { text: 'tarifs', id: '#prices' },
   { text: 'contact', id: '#contact' },
 ];
@@ -32,8 +31,7 @@ const Header = () => {
   const openMenu = () => setDrawer(true);
   const closeMenu = () => setDrawer(false);
 
-  const backToTop = () => scrollToEl('#page-top');
-  const goToSection = selector => () => {
+  const goToSection = selector => {
     closeMenu();
     scrollToEl(selector, { offset: bigHeader ? -120 : -80 }); // counter the header
   }
@@ -62,18 +60,10 @@ const Header = () => {
               color='inherit'
               title='Remonter en haut de la page'
               aria-label='go top'
-              sx={{ mr: {xs: 0, sm: 2}, display: {md: 'none'} }}
-              onClick={backToTop}
+              sx={{ display: {md: 'none'} }}
+              onClick={() => scrollToEl('#page-top')}
             >
-              <ArrowUpwardRoundedIcon />
-            </IconButton>
-            <IconButton
-              size='large'
-              edge='end'
-              color='inherit'
-              aria-label='settings'
-            >
-              <SettingsIcon />
+              <HomeIcon />
             </IconButton>
           </Toolbar>
           <Stack
@@ -87,7 +77,7 @@ const Header = () => {
                   key={text}
                   color='inherit'
                   fullWidth
-                  onClick={goToSection(id)}
+                  onClick={() => goToSection(id)}
                   sx={{
                     py: 1.5,
                     borderRadius: 0,
@@ -129,7 +119,7 @@ const Header = () => {
               <Button
                 key={text}
                 color='inherit'
-                onClick={goToSection(id)}
+                onClick={() => goToSection(id)}
                 sx={{
                   px: 6,
                   py: 2,

@@ -10,6 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 
 const SocialButton = ({ icon, title, href }) => {
   const IconElement = icon;
@@ -56,6 +57,11 @@ const Footer = () => {
             <SocialButton
               icon={LinkedInIcon}
               title='Prochainement :)'
+            />
+            <SocialButton
+              icon={EmailIcon}
+              title='paul@paulchap.com'
+              href='mailto:paul@paulchap.com'
             />
           </Stack>
         </Toolbar>

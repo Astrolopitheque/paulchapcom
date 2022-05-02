@@ -4,6 +4,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Toolbar from '@mui/material/Toolbar';
+import "@fontsource/roboto-condensed/400.css"
+import "@fontsource/roboto-condensed/700.css"
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
