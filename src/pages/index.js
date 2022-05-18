@@ -13,6 +13,7 @@ const Index = () => {
     <Layout>
       <Metadata />
       <Container>
+        <a href='/pagequinexistepas'>Page qui n'existe pas</a>
         <HomeSection />
         <ServicesSection />
         <SkillsSection />

@@ -1,17 +1,21 @@
-import * as React from 'react';
-import Layout from '../components/layout';
-import Metadata from '../components/metadata';
+import React, { useState, useEffect  } from 'react';
 import Container from '@mui/material/Container';
-import StyledHeading from '../components/styledheading';
 
 const Index = () => {
+  const [timeleft, setTimeleft] = useState(10);
+  const redirect = () => document.location.href = '/';
+  const decrement = () => setTimeleft(timeleft - 1);
+
+  useEffect(() => {
+    if(!timeleft) redirect();
+    const timer = setTimeout(decrement, 1000);
+    return () => clearTimeout(timer);
+  });
+
   return (
-    <Layout>
-      <Metadata />
-      <Container>
-        <StyledHeading>Services proposés</StyledHeading>
-      </Container>
-    </Layout>
+    <Container>
+      Cette page n'existe pas, vous serez redirigé vers l'accueil dans { timeleft }s
+    </Container>
   );
 }
 
