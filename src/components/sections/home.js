@@ -27,7 +27,7 @@ const HomeSection = () => {
             >
               <b>Passionné d'informatique</b> depuis mon enfance,
               j'ai longuement exploré cette discipline à travers <b>différents projets</b>.
-              Aujourd'hui âgé de 18 ans et étudiant à Sorbonne Université,
+              Aujourd'hui âgé de 19 ans et étudiant à Sorbonne Université,
               j'ai décidé de me lancer dans le monde professionnel en tant que <b>développeur indépendant</b>.
             </Typography>
             <Typography variant='h6' component='p'>

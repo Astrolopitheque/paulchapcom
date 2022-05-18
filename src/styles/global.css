@@ -2,3 +2,13 @@ body {
     background-color: #e7ebf1 !important;
     color: #353535;
 }
+
+a {
+    color: #1971ce;
+    text-decoration: none;
+    border-bottom: 2px dotted currentColor;
+}
+
+a:hover {
+    color: #f00;
+}

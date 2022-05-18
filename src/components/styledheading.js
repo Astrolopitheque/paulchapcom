@@ -4,8 +4,8 @@ import Typography from '@mui/material/Typography';
 const StyledHeading = ({ children, color, sx }) => {
   return (
     <Typography
-      fontFamily='Roboto Condensed, sans-serif'
       variant='h2'
+      fontFamily='Roboto Condensed, sans-serif'
       fontSize={{xs: '1.9em', md: '2.8em'}}
       align='center'
       sx={{

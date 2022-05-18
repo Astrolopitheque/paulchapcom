@@ -11,7 +11,7 @@ import ContactSection from '../components/sections/contact';
 const Index = () => {
   return (
     <Layout>
-      <Metadata />
+      <Metadata title='Développeur indépendant' />
       <Container>
         <a href='/pagequinexistepas'>Page qui n'existe pas</a>
         <HomeSection />
