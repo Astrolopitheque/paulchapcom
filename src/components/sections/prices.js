@@ -57,14 +57,11 @@ const PricesSection = () => {
                     p: '15px',
                     color: '#333',
                     borderColor: '#333 !important',
-                    boxShadow: 'inset 0 0 #2b8273',
+                    boxShadow: 'inset 0 0 currentColor',
                     borderRadius: 0,
                     transition: '0.5s',
                     '&:hover, &:active': {
-                      boxShadow: {
-                        xs: 'inset 1em 0 currentColor',
-                        md: 'inset 4em 0 currentColor',
-                      },
+                      boxShadow: 'inset 1em 0 currentColor',
                     },
                   }}
                   onClick={() => scrollToEl('#contact')}
