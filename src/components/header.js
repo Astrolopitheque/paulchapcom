@@ -81,7 +81,7 @@ const Header = () => {
                   boxShadow: 'inset 0 0 currentColor', // keep box shadow from color shifting
                   transition: '0.2s',
                   '&:hover, &:active': {
-                    boxShadow: 'inset 0 -0.3em currentColor',
+                    boxShadow: 'inset 0 -0.4em currentColor',
                   },
                 }}
               >
