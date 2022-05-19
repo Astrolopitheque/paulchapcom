@@ -12,9 +12,9 @@ import SettingsIcon from '@mui/icons-material/Settings';
 
 const ContactSection = () => {
   const sirenDescription = `
-  Le numéro SIREN (pour « système d'identification du répertoire des entreprises »)
-  est le numéro unique d'identification de chaque entreprise.
-  C'est ce numéro qui permet d'identifier chaque entreprise auprès des administrations.
+  Le numéro SIREN (Système d'Identification du Répertoire des ENtreprises)
+  est un identifiant unique pour les entreprises.
+  Il permet d'identifier chaque entreprise auprès des administrations.
   `;
 
   return (

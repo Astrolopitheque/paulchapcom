@@ -1,29 +1,31 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import StyledHeading from '../styledheading';
 
 const HomeSection = () => {
   return (
-    <section>
-      <Box display='flex' justifyContent='center'>
-        <Paper
-          sx={{
-            color: 'white',
-            bgcolor: '#69bab8',
-            width: {sm: '80%', md: '70%', lg: '60%'},
-            borderRadius: 0,
-            p: 3,
-            textAlign: 'center'
+    <section style={{ display: 'flex', justifyContent: 'center' }}>
+      <Box
+        padding='4px'
+        width={{ sm: '80%', md: '70%', lg: '60%' }}
+        border='1px solid #333'
+      >
+        <div
+          style={{
+            color: '#fff',
+            backgroundColor: '#69bab8',
+            textAlign: 'center',
           }}
         >
-          <StyledHeading sx={{ mt: 0 }}>Qui suis-je ?</StyledHeading>
-          <Box display='flex' flexDirection='column' alignItems={'flex-end'}>
+          <Box py={3} bgcolor='#2b8273'>
+            <StyledHeading sx={{ my: 0 }}>Qui suis-je ?</StyledHeading>
+          </Box>
+          <Box p={3} display='flex' flexDirection='column' alignItems={'flex-end'}>
             <Typography
               mb={2}
               align='justify'
-              width={{md: '90%'}}
+              width={{ md: '90%' }}
             >
               <b>Passionné d'informatique</b> depuis mon enfance,
               j'ai longuement exploré cette discipline à travers <b>différents projets</b>.
@@ -34,7 +36,7 @@ const HomeSection = () => {
               Paul Chaperon
             </Typography>
           </Box>
-        </Paper>
+        </div>
       </Box>
     </section>
   );
