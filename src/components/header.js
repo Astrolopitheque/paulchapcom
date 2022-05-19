@@ -120,9 +120,10 @@ const Header = () => {
                   borderRadius: 0,
                   justifyContent: 'flex-start',
                   letterSpacing: 2,
+                  boxShadow: 'inset 0em 0 currentColor', // keep box shadow from color shifting
                   transition: '0.5s',
                   '&:active': {
-                    pl: 8,
+                    boxShadow: 'inset 0.5em 0 currentColor',
                   },
                 }}
               >
