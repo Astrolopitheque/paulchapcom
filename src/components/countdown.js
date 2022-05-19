@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Countdown = ({ start, interval, callback, str }) => {
   if(start < 0) start = 0;
@@ -8,7 +8,7 @@ const Countdown = ({ start, interval, callback, str }) => {
 
   useEffect(() => {
     if(!timeleft) {
-      callback();
+      setTimeout(callback, interval);
     }
     else {
       const timer = setTimeout(decrement, interval);

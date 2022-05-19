@@ -7,7 +7,10 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Service = ({ summary, children }) => {
   return (
-    <Accordion elevation={0} sx={{ m: '0 !important', bgcolor: 'transparent' }}>
+    <Accordion
+      elevation={0}
+      sx={{ m: '0 !important', bgcolor: 'transparent' }}
+    >
       <AccordionSummary
         sx={{
           '&.Mui-expanded': {

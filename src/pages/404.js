@@ -13,12 +13,12 @@ import "@fontsource/roboto-condensed/700.css"
 import '../styles/global.css';
 
 
-const spin = keyframes`
+const sway = keyframes`
   from {
-    opacity: 0.4;
+    transform: rotate(-10deg);
   }
   to {
-    opacity: 1;
+    transform: rotate(10deg);
   }
 `;
 
@@ -41,7 +41,7 @@ const NotFound = () => {
         <Typography
           variant='h5'
           color='#777'
-          mt={2}
+          mt={3}
           fontFamily='Roboto Condensed, sans-serif'
           fontSize={{ xs: 16, md: 25 }}
         >
@@ -51,12 +51,12 @@ const NotFound = () => {
         </Typography>
         <Typography
           variant='h1'
-          mt={2}
+          mt={5}
           color='rgba(0, 0, 0, 0.15)'
           fontFamily='Dosis, sans-serif'
           fontSize={{ xs: 200, md: 300 }}
           sx={{
-            animation:`0.8s ease-in-out 0s infinite alternate ${spin}`,
+            animation:`2s ease-in-out 0s infinite alternate ${sway}`,
             '-webkit-user-select': 'none',      
             '-moz-user-select': 'none',
             '-ms-user-select': 'none',
