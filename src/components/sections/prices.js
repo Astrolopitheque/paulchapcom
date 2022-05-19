@@ -59,7 +59,7 @@ const PricesSection = () => {
                     borderColor: '#333 !important',
                     boxShadow: 'inset 0 0 currentColor',
                     borderRadius: 0,
-                    transition: '0.5s',
+                    transition: '0.3s',
                     '&:hover, &:active': {
                       boxShadow: 'inset 1em 0 currentColor',
                     },
