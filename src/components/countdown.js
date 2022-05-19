@@ -1,6 +1,6 @@
 import React, { useState, useEffect  } from 'react';
 
-const Countdown = ({ start, interval, callback }) => {
+const Countdown = ({ start, interval, callback, str }) => {
   if(start < 0) start = 0;
 
   const [timeleft, setTimeleft] = useState(start);
@@ -17,13 +17,14 @@ const Countdown = ({ start, interval, callback }) => {
   });
 
   return (
-    <span>{ timeleft }</span>
+    <span>{ str(timeleft) }</span>
   );
 }
 
 Countdown.defaultProps = {
   interval: 1000,
   callback: () => {},
+  str: n => n,
 }
 
 export default Countdown;
