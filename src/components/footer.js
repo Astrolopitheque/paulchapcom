@@ -22,6 +22,9 @@ const SocialButton = ({ icon, title, href }) => {
         target='_blank'
         sx={{
           mx: 0.5,
+          '&:hover': {
+            color: 'inherit',
+          },
         }}
       >
         <IconElement />
