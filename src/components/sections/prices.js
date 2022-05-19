@@ -62,7 +62,7 @@ const PricesSection = () => {
                     transition: '0.5s',
                     '&:hover, &:active': {
                       boxShadow: {
-                        xs: 'inset 2em 0 currentColor',
+                        xs: 'inset 1em 0 currentColor',
                         md: 'inset 4em 0 currentColor',
                       },
                     },
