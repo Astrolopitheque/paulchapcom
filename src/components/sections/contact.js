@@ -66,7 +66,7 @@ const ContactSection = () => {
         textAlign='center'
         fontFamily='Roboto Condensed, sans-serif'
       >
-        Un message détaillé permet une réponse plus rapide et plus précise
+        Un message détaillé permet une réponse plus rapide et plus précise.
       </Typography>
     </section>
   );

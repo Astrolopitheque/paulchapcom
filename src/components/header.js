@@ -78,6 +78,11 @@ const Header = () => {
                   borderRadius: 0,
                   fontSize: '0.7em',
                   letterSpacing: 2,
+                  boxShadow: 'inset 0 0 currentColor', // keep box shadow from color shifting
+                  transition: '0.2s',
+                  '&:hover, &:active': {
+                    boxShadow: 'inset 0 -0.3em currentColor',
+                  },
                 }}
               >
                 {text}
@@ -120,7 +125,7 @@ const Header = () => {
                   borderRadius: 0,
                   justifyContent: 'flex-start',
                   letterSpacing: 2,
-                  boxShadow: 'inset 0em 0 currentColor', // keep box shadow from color shifting
+                  boxShadow: 'inset 0 0 currentColor', // keep box shadow from color shifting
                   transition: '0.5s',
                   '&:hover, &:active': {
                     boxShadow: 'inset 0.5em 0 currentColor',

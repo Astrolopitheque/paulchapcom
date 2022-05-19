@@ -28,8 +28,8 @@ const NotFound = () => {
     <StylesProvider injectFirst>
       <Metadata title="Page introuvable" />
       <CssBaseline />
-      <Container sx={{ mt: 7, textAlign: 'center' }}>
-      <StyledHeading>Page introuvable</StyledHeading>
+      <Container sx={{ mt: 7, textAlign: 'center', overflow: 'hidden' }}>
+        <StyledHeading>Page introuvable</StyledHeading>
         <Typography
           variant='h5'
           color='#777'
@@ -39,7 +39,7 @@ const NotFound = () => {
         >
           Oops ! Il semblerait que cette page n'existe pas ! <br />
           Vous serez redirigé vers <Link to='/'>l'accueil</Link>{' '}
-          dans <Countdown start={10} callback={redirect} component={Redirect} /> secondes
+          dans <Countdown start={10} callback={redirect} component={Redirect} /> secondes.
         </Typography>
         <Typography
           variant='h1'
@@ -55,7 +55,7 @@ const NotFound = () => {
             'user-select': 'none',
           }}
         >
-          404
+         404
         </Typography>
       </Container>
     </StylesProvider>

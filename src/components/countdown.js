@@ -10,7 +10,7 @@ const Countdown = ({ start, interval, callback, component }) => {
 
   useEffect(() => {
     if(!timeleft) {
-      setTimeout(callback, interval);
+      callback();
     }
     else {
       const timer = setTimeout(decrement, interval);
