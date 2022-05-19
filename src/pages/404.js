@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Metadata from '../components/metadata';
+import StyledHeading from '../components/styledheading';
 import { Link } from "gatsby"
 import { StylesProvider } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -7,9 +8,6 @@ import Countdown from '../components/countdown';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { keyframes } from '@mui/system';
-import "@fontsource/dosis/600.css"
-import "@fontsource/roboto-condensed/400.css"
-import "@fontsource/roboto-condensed/700.css"
 import '../styles/global.css';
 
 
@@ -24,20 +22,14 @@ const sway = keyframes`
 
 const NotFound = () => {
   const redirect = () => document.location.href = '/';
-  const countdownStr = n => n.toString().padStart(2, '0');
+  const Redirect = ({ timeleft }) => <span>{ timeleft.toString().padStart(2, '0') }</span>;
 
   return (
     <StylesProvider injectFirst>
       <Metadata title="Page introuvable" />
       <CssBaseline />
       <Container sx={{ mt: 7, textAlign: 'center' }}>
-        <Typography
-          variant='h3'
-          fontFamily='Roboto Condensed, sans-serif'
-          fontSize={{ xs: 35, md: 50 }}
-        >
-          Page introuvable
-        </Typography>
+      <StyledHeading>Page introuvable</StyledHeading>
         <Typography
           variant='h5'
           color='#777'
@@ -47,7 +39,7 @@ const NotFound = () => {
         >
           Oops ! Il semblerait que cette page n'existe pas ! <br />
           Vous serez redirigé vers <Link to='/'>l'accueil</Link>{' '}
-          dans <Countdown start={10} callback={redirect} str={countdownStr} /> secondes
+          dans <Countdown start={10} callback={redirect} component={Redirect} /> secondes
         </Typography>
         <Typography
           variant='h1'

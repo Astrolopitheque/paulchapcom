@@ -58,6 +58,10 @@ const PricesSection = () => {
                     color: '#333',
                     borderColor: '#333 !important',
                     borderRadius: 0,
+                    transition: '0.5s',
+                    '&:hover, &:active': {
+                      borderLeftWidth: { xs: 30, md: 50 },
+                    },
                   }}
                   onClick={() => scrollToEl('#contact')}
                 >

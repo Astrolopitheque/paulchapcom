@@ -35,7 +35,7 @@ const Footer = () => {
     <AppBar position='relative' elevation={0} sx={{ mt: 4, bgcolor: '#2b8273' }}>
       <Toolbar sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
         <Typography mt={2} mb={{sm: 2}} sx={{ flexGrow: 1 }}>
-          Site développé par Paul Chaperon &copy; {new Date().getFullYear().toString()}{' '}
+          Site développé par Paul Chaperon &copy; {new Date().getFullYear()}{' '}
         </Typography>
         <Stack my={1} direction='row'>
           <SocialButton

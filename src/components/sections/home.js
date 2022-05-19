@@ -13,13 +13,11 @@ const HomeSection = () => {
       >
         <div
           style={{
-            color: '#fff',
-            backgroundColor: '#69bab8',
             textAlign: 'center',
           }}
         >
-          <Box py={3} bgcolor='#2b8273'>
-            <StyledHeading sx={{ my: 0 }}>Qui suis-je ?</StyledHeading>
+          <Box py={3} bgcolor='#353535'>
+            <StyledHeading sx={{ color: '#fff', my: 0 }}>Qui suis-je ?</StyledHeading>
           </Box>
           <Box p={3} display='flex' flexDirection='column' alignItems={'flex-end'}>
             <Typography

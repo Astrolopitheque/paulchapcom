@@ -120,6 +120,10 @@ const Header = () => {
                   borderRadius: 0,
                   justifyContent: 'flex-start',
                   letterSpacing: 2,
+                  transition: '0.5s',
+                  '&:active': {
+                    pl: 8,
+                  },
                 }}
               >
                 {text}
