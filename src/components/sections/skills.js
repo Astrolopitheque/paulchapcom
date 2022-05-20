@@ -26,11 +26,11 @@ const SkillsSection = () => {
             text='CSS, SASS, Bootstrap'
           />
           <Competence
-            progress={65}
+            progress={50}
             text='MySQL / SQL, MongoDB'
           />
           <Competence
-            progress={50}
+            progress={30}
             text='PHP'
           />
         </Box>
