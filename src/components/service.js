@@ -25,6 +25,7 @@ const Service = ({ summary, children }) => {
         expandIcon={
           <ExpandMoreIcon
             sx={{
+              fontSize: '2em',
               color: '#fff',
               transition: '0.2s',
               opacity: 0,
