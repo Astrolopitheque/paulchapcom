@@ -3,7 +3,7 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Service = ({ summary, children }) => {
   return (
@@ -13,25 +13,23 @@ const Service = ({ summary, children }) => {
     >
       <AccordionSummary
         sx={{
+          height: 60,
+          bgcolor: '#2b8273',
           '&.Mui-expanded': {
             minHeight: 0,
           },
           '& .MuiAccordionSummary-content.Mui-expanded': {
             margin: '12px 0',
           },
-          height: 60,
-          bgcolor: '#2b8273',
         }}
         expandIcon={
-          <ArrowForwardIosRoundedIcon
+          <ExpandMoreIcon
             sx={{
               color: '#fff',
               transition: '0.2s',
               opacity: 0,
-              transform: 'translateX(-20px)',
               '.MuiAccordionSummary-root:hover &, .MuiAccordionSummary-root.Mui-expanded &': {
                 opacity: 1,
-                transform: 'none',
               },
             }}
           />
