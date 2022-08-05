@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { theme } from '../variables';
 import Typography from '@mui/material/Typography';
 
 const StyledHeading = ({ children, color, sx }) => {
@@ -22,6 +23,7 @@ const StyledHeading = ({ children, color, sx }) => {
 
 StyledHeading.defaultProps = {
   align: 'left',
+  color: theme.text.dark,
 }
 
 export default StyledHeading;

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { theme } from '../variables';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import LinearProgress from '@mui/material/LinearProgress';
@@ -9,7 +10,7 @@ const Competence = ({ text, progress }) => {
       display='flex'
       alignItems='center'
       mb={3}
-      color='#822b3a'
+      color={ theme.secondary }
     >
       <Typography
         position='absolute'
@@ -18,7 +19,7 @@ const Competence = ({ text, progress }) => {
         variant='h6'
         component='p'
         fontSize={{ xs: '1em', md: '1.1em' }}
-        color='#ffffff'
+        color={ theme.text.light }
         textAlign='left'
       >
         {text}

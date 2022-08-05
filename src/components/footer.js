@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { theme } from '../variables';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Stack from '@mui/material/Stack';
@@ -35,7 +36,11 @@ const SocialButton = ({ icon, title, href }) => {
 
 const Footer = () => {
   return (
-    <AppBar position='relative' elevation={0} sx={{ mt: 4, bgcolor: '#2b8273' }}>
+    <AppBar
+      position='relative'
+      elevation={0}
+      sx={{ mt: 4, color: theme.text.light, bgcolor: theme.primary }}
+    >
       <Toolbar sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
         <Typography mt={2} mb={{sm: 2}} sx={{ flexGrow: 1 }}>
           Site développé par Paul Chaperon &copy; {new Date().getFullYear()}{' '}

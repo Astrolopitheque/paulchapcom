@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { theme } from '../variables';
 
 const ContactInfo = ({ icon, name, children }) => {
   const Icon = icon;
@@ -20,8 +21,8 @@ const ContactInfo = ({ icon, name, children }) => {
           <th
             style={{
               position: 'relative',
-              color: '#fff',
-              backgroundColor: '#822b3a',
+              color: theme.text.light,
+              backgroundColor: theme.secondary,
               padding: 5,
               textTransform: 'uppercase',
               fontSize: '0.8em',
@@ -44,7 +45,8 @@ const ContactInfo = ({ icon, name, children }) => {
           <td
             style={{
               fontWeight: 'bold',
-              backgroundColor: '#c8b0b9',
+              color: theme.text.dark,
+              backgroundColor: theme.light.secondary,
               padding: 12,
             }}
           >

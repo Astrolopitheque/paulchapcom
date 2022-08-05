@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { theme } from '../../variables';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import StyledHeading from '../styledheading';
@@ -21,7 +22,7 @@ const ContactSection = () => {
     <section id='contact'>
       <StyledHeading>Contactez-moi !</StyledHeading>
       <Typography
-        color='#777'
+        color={ theme.text.disabled }
         textAlign='center'
         fontFamily='Roboto Condensed, sans-serif'
         fontWeight={700}
@@ -63,6 +64,7 @@ const ContactSection = () => {
         </Stack>
       </Box>
       <Typography
+        color={ theme.text.dark }
         textAlign='center'
         fontFamily='Roboto Condensed, sans-serif'
       >

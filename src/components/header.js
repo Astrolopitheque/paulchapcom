@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { theme } from '../variables';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Drawer from '@mui/material/Drawer';
@@ -23,8 +24,8 @@ const sections = [
 ];
 
 const Header = () => {
-  const theme = useTheme();
-  const bigHeader = useMediaQuery(theme.breakpoints.up('md'));
+  const muiTheme = useTheme();
+  const bigHeader = useMediaQuery(muiTheme.breakpoints.up('md'));
 
   const [drawer, setDrawer] = useState(false);
   const openMenu = () => setDrawer(true);
@@ -37,8 +38,8 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position='fixed' elevation={0} sx={{bgcolor: '#fff'}}>
-        <Toolbar sx={{ bgcolor: '#2b8273' }}>
+      <AppBar position='fixed' elevation={0} sx={{ bgcolor: 'white' }}>
+        <Toolbar sx={{ color: theme.text.light, bgcolor: theme.primary }}>
           <IconButton
             size='large'
             edge='start'
@@ -58,13 +59,13 @@ const Header = () => {
             onClick={() => scrollToEl('#page-top')}
           >
             Paul Chaperon
-            <span style={{ color: '#353535' }}>.com</span>
+            <span style={{ color: theme.secondary }}>.com</span>
           </Typography>
         </Toolbar>
         <Stack
           display={{ xs: 'none', md: 'flex' }}
           direction='row'
-          color='#353535'
+          color={ theme.text.dark }
         >
           {
             sections.map(({text, id}, i) => 

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { theme } from '../../variables';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import StyledHeading from '../styledheading';
@@ -27,12 +28,13 @@ const PricesSection = () => {
               <th 
                 colSpan={2}
                 style={{
-                  backgroundColor: '#2b8273',
-                  color: '#fff',
+                  backgroundColor: theme.primary,
+                  color: theme.text.light,
                 }}
               >
                 <StyledHeading
                   sx={{
+                    color: theme.text.light,
                     m: 0,
                     p: 2,
                   }}
@@ -55,8 +57,8 @@ const PricesSection = () => {
                   fullWidth
                   sx={{
                     p: '15px',
-                    color: '#333',
-                    borderColor: '#333 !important',
+                    color: theme.text.dark,
+                    borderColor: theme.text.dark + ' !important',
                     boxShadow: 'inset 0 0 currentColor',
                     borderRadius: 0,
                     transition: '0.3s',
@@ -73,11 +75,11 @@ const PricesSection = () => {
                 </Button>
               </TableCell>
             </tr>
-            <tr style={{ color: '#fff', backgroundColor: '#822b3a' }}>
+            <tr style={{ color: '#fff', backgroundColor: theme.secondary }}>
               <TableCell>Tarif horaire</TableCell>
               <TableCell>Tarif journalier moyen</TableCell>
             </tr>
-            <tr style={{ backgroundColor: '#c8b0b9' }}>
+            <tr style={{ backgroundColor: theme.light.secondary }}>
               <TableCell>55 €/heure</TableCell>
               <TableCell>250 €/jour</TableCell>
             </tr>

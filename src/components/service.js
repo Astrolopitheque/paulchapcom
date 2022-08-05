@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { theme } from '../variables';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -14,7 +15,7 @@ const Service = ({ summary, children }) => {
       <AccordionSummary
         sx={{
           height: 60,
-          bgcolor: '#2b8273',
+          bgcolor: theme.primary,
           '&.Mui-expanded': {
             minHeight: 0,
           },
@@ -26,7 +27,7 @@ const Service = ({ summary, children }) => {
           <ExpandMoreIcon
             sx={{
               fontSize: '2em',
-              color: '#fff',
+              color: theme.text.light,
               transition: '0.2s',
               opacity: 0,
               '.MuiAccordionSummary-root:hover &, .MuiAccordionSummary-root.Mui-expanded &': {
@@ -37,7 +38,7 @@ const Service = ({ summary, children }) => {
         }
       >
         <Typography
-          color='#fff'
+          color={ theme.text.light }
           textTransform='uppercase'
           letterSpacing={2}
         >

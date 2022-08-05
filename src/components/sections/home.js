@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { theme } from '../../variables';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import StyledHeading from '../styledheading';
@@ -16,10 +17,12 @@ const HomeSection = () => {
             textAlign: 'center',
           }}
         >
-          <Box py={3} bgcolor='#353535'>
-            <StyledHeading sx={{ color: '#fff', my: 0 }}>Qui suis-je ?</StyledHeading>
+          <Box py={3} bgcolor={ theme.text.dark }>
+            <StyledHeading sx={{ color: theme.text.light, my: 0 }}>
+              Qui suis-je ?
+            </StyledHeading>
           </Box>
-          <Box p={3} display='flex' flexDirection='column' alignItems={'flex-end'}>
+          <Box color={ theme.text.dark } p={3} display='flex' flexDirection='column' alignItems={'flex-end'}>
             <Typography
               mb={2}
               align='justify'
