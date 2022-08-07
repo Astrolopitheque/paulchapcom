@@ -17,10 +17,8 @@ const PricesSection = () => {
       <Box display='flex' flexDirection='column' alignItems='center'>
         <table
           style={{
-            width: 'min(100%, 650px)',
-            border: '1px solid #333',
-            borderCollapse: 'separate',
-            borderSpacing: 4,
+            width: 'min(100%, 500px)',
+            borderCollapse: 'collapse',
           }}
         >
           <thead>
@@ -30,6 +28,7 @@ const PricesSection = () => {
                 style={{
                   backgroundColor: theme.primary,
                   color: theme.text.light,
+                  borderTopLeftRadius: '20px',
                 }}
               >
                 <StyledHeading
@@ -53,12 +52,11 @@ const PricesSection = () => {
                 }}
               >
                 <Button
-                  variant='outlined'
+                  variant='text'
                   fullWidth
                   sx={{
                     p: '15px',
                     color: theme.text.dark,
-                    borderColor: theme.text.dark + ' !important',
                     boxShadow: 'inset 0 0 currentColor',
                     borderRadius: 0,
                     transition: '0.3s',
@@ -79,9 +77,22 @@ const PricesSection = () => {
               <TableCell>Tarif horaire</TableCell>
               <TableCell>Tarif journalier moyen</TableCell>
             </tr>
-            <tr style={{ backgroundColor: theme.light.secondary }}>
-              <TableCell>55 €/heure</TableCell>
-              <TableCell>250 €/jour</TableCell>
+            <tr>
+              <TableCell
+                style={{
+                  backgroundColor: theme.light.secondary,
+                }}
+              >
+                55 €/heure
+              </TableCell>
+              <TableCell
+                style={{
+                  backgroundColor: theme.light.secondary,
+                  borderBottomRightRadius: '20px',
+                }}
+              >
+                250 €/jour
+              </TableCell>
             </tr>
           </tbody>
         </table>

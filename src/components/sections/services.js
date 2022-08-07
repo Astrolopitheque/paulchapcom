@@ -3,12 +3,18 @@ import StyledHeading from '../styledheading';
 import Box from '@mui/material/Box';
 import Service from '../service';
 
-const SkillsSection = () => {
+const ServicesSection = () => {
   return (
     <section id='services'>
       <StyledHeading>Services proposés</StyledHeading>
       <Box display='flex' justifyContent='center'>
-        <div style={{ padding: 4, border: '1px solid #333' }}>
+        <div
+          style={{
+            borderTopLeftRadius: '20px',
+            borderBottomRightRadius: '20px',
+            overflow: 'hidden',
+          }}
+        >
           <Box width={{ sm: 500, md: 700 }}>
             <Service summary='Création de site web'>
               Site vitrine, E-commerce, Intranet.
@@ -32,4 +38,4 @@ const SkillsSection = () => {
   );
 }
 
-export default SkillsSection;
+export default ServicesSection;

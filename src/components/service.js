@@ -29,7 +29,7 @@ const Service = ({ summary, children }) => {
               fontSize: '2em',
               color: theme.text.light,
               transition: '0.2s',
-              opacity: 0,
+              opacity: 0.2,
               '.MuiAccordionSummary-root:hover &, .MuiAccordionSummary-root.Mui-expanded &': {
                 opacity: 1,
               },

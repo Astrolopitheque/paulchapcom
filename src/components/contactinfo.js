@@ -9,9 +9,7 @@ const ContactInfo = ({ icon, name, children }) => {
       style={{
         display: 'inline-table',
         margin: 10,
-        border: '1px solid #333',
-        borderCollapse: 'separate',
-        borderSpacing: 4,
+        borderCollapse: 'collapse',
         minWidth: '200px',
         textAlign: 'center',
       }}
@@ -23,7 +21,8 @@ const ContactInfo = ({ icon, name, children }) => {
               position: 'relative',
               color: theme.text.light,
               backgroundColor: theme.secondary,
-              padding: 5,
+              borderTopLeftRadius: '10px',
+              padding: 6,
               textTransform: 'uppercase',
               fontSize: '0.8em',
               letterSpacing: '0.1em',
@@ -47,7 +46,8 @@ const ContactInfo = ({ icon, name, children }) => {
               fontWeight: 'bold',
               color: theme.text.dark,
               backgroundColor: theme.light.secondary,
-              padding: 12,
+              borderBottomRightRadius: '10px',
+              padding: 15,
             }}
           >
             { children }

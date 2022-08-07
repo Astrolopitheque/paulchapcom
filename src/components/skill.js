@@ -4,12 +4,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import LinearProgress from '@mui/material/LinearProgress';
 
-const Competence = ({ text, progress }) => {
+const Skill = ({ text, progress }) => {
   return (
     <Box
       display='flex'
       alignItems='center'
-      mb={3}
       color={ theme.secondary }
     >
       <Typography
@@ -28,15 +27,15 @@ const Competence = ({ text, progress }) => {
         variant='determinate'
         value={progress}
         color='inherit'
-        sx={{ height: '2em', flexGrow: 1 }}
+        sx={{ height: '3em', flexGrow: 1 }}
       />
     </Box>
   );
 }
 
-Competence.defaultProps = {
+Skill.defaultProps = {
   progress: 0,
   size: '100px',
 }
 
-export default Competence;
+export default Skill;

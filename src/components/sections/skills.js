@@ -1,35 +1,42 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import StyledHeading from '../styledheading';
-import Competence from '../competence';
+import Skill from '../skill';
 
 const SkillsSection = () => {
   return (
     <section id='skills'>
       <StyledHeading>Mes compétences</StyledHeading>
       <Box display='flex' justifyContent='center' mb={5}>
-        <Box width='min(100%, 800px)'>
-          <Competence
+        <Box
+          width='min(100%, 800px)'
+          overflow='hidden'
+          sx={{
+            borderTopLeftRadius: '20px',
+            borderBottomRightRadius: '20px',
+          }}
+        >
+          <Skill
             progress={90}
             text='Javascript, JSX, React'
           />
-          <Competence
+          <Skill
             progress={85}
             text='NodeJS, Express, Gatsby'
           />
-          <Competence
+          <Skill
             progress={80}
             text='HTML, SEO'
           />
-          <Competence
+          <Skill
             progress={70}
             text='CSS, SASS, Bootstrap'
           />
-          <Competence
+          <Skill
             progress={50}
             text='MySQL / SQL, MongoDB'
           />
-          <Competence
+          <Skill
             progress={30}
             text='PHP'
           />

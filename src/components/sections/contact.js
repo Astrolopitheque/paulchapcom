@@ -37,7 +37,7 @@ const ContactSection = () => {
       >
         <Stack
           direction={{ xs: 'column', md: 'row' }}
-          width={{ xs: '300px', md: '100%' }}
+          width={{ xs: '260px', md: '100%' }}
           justifyContent='center'
         >
           <ContactInfo icon={ LocationOnIcon } name='Adresse'>

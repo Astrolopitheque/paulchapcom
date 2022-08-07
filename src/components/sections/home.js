@@ -8,21 +8,33 @@ const HomeSection = () => {
   return (
     <section style={{ display: 'flex', justifyContent: 'center' }}>
       <Box
-        padding='4px'
         width={{ sm: '80%', md: '70%', lg: '60%' }}
-        border='1px solid #333'
+        border={ '1px solid ' + theme.secondary }
+        overflow='hidden'
+        sx={{
+          borderTopLeftRadius: '20px',
+          borderBottomRightRadius: '20px',
+        }}
       >
         <div
           style={{
             textAlign: 'center',
           }}
         >
-          <Box py={3} bgcolor={ theme.text.dark }>
+          <Box
+            py={3}
+            bgcolor={ theme.secondary }
+          >
             <StyledHeading sx={{ color: theme.text.light, my: 0 }}>
               Qui suis-je ?
             </StyledHeading>
           </Box>
-          <Box color={ theme.text.dark } p={3} display='flex' flexDirection='column' alignItems={'flex-end'}>
+          <Box
+            color={ theme.text.dark }
+            p={3}
+            display='flex'
+            flexDirection='column' alignItems={'flex-end'}
+          >
             <Typography
               mb={2}
               align='justify'
