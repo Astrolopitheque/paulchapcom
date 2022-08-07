@@ -7,7 +7,7 @@ const SkillsSection = () => {
   return (
     <section id='skills'>
       <StyledHeading>Mes compétences</StyledHeading>
-      <Box display='flex' justifyContent='center' mb={5}>
+      <Box display='flex' justifyContent='center' mb={7}>
         <Box
           width='min(100%, 800px)'
           overflow='hidden'
