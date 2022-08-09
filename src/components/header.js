@@ -59,7 +59,7 @@ const Header = () => {
             onClick={() => scrollToEl('#page-top')}
           >
             Paul Chaperon
-            <span style={{ color: theme.secondary }}>.com</span>
+            <span style={{ color: theme.text.dark }}>.com</span>
           </Typography>
         </Toolbar>
         <Stack

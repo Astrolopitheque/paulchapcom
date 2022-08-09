@@ -1,12 +1,10 @@
 export const theme = {
-  primary: '#2355a6',
-  secondary: '#ff821b',
-  light: {
-    secondary: '#ffd8b7',
-  },
+  primary: '#00a1e4',
   text: {
     light: '#fff',
     dark: '#353535',
     disabled: '#777',
   },
 };
+
+// 1982c4 F7A223 FFDCD9

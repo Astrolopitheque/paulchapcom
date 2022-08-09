@@ -9,7 +9,7 @@ const Skill = ({ text, progress }) => {
     <Box
       display='flex'
       alignItems='center'
-      color={ theme.secondary }
+      color={ theme.primary }
     >
       <Typography
         position='absolute'

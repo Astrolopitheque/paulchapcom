@@ -1,19 +1,21 @@
 import * as React from 'react';
 import { theme } from '../../variables';
 import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import StyledHeading from '../styledheading';
 
 const HomeSection = () => {
   return (
     <section style={{ display: 'flex', justifyContent: 'center' }}>
-      <Box
-        width={{ sm: '80%', md: '70%', lg: '60%' }}
-        border={ '1px solid ' + theme.secondary }
-        overflow='hidden'
+      <Paper
+        elevation={4}
         sx={{
+          width: { sm: '80%', md: '70%', lg: '60%' },
+          borderRadius: 0,
           borderTopLeftRadius: '20px',
           borderBottomRightRadius: '20px',
+          overflow: 'hidden',
         }}
       >
         <div
@@ -23,7 +25,7 @@ const HomeSection = () => {
         >
           <Box
             py={3}
-            bgcolor={ theme.secondary }
+            bgcolor={ theme.primary }
           >
             <StyledHeading sx={{ color: theme.text.light, my: 0 }}>
               Qui suis-je ?
@@ -50,7 +52,7 @@ const HomeSection = () => {
             </Typography>
           </Box>
         </div>
-      </Box>
+      </Paper>
     </section>
   );
 }
